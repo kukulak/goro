@@ -1,0 +1,89 @@
+/* 
+
+.home, .quienes, .mezclas, .fotos, .redesApi, .contacto{
+    height: 100vh;
+    color: #fafafa;
+    background-color: black;
+    width: 100%;
+  }  
+  
+   */
+  .home{
+    /* background-color: black; */
+    background-color: transparent;
+  
+  }
+  .quienes{
+    background-color: rgba(202, 0, 0, 0.315);
+    /* background-color: transparent; */
+    padding-top: 100vh;
+    height: 200vh;
+  
+  }
+  .mezclas{
+    /* background-color: rgb(15, 15, 15); */
+    background-color: transparent;
+  
+  
+  }
+  .fotos{
+    /* background-color: rgb(29, 29, 29); */
+    background-color: transparent;
+  
+  
+  }
+  .redesApi{
+    /* background-color: rgb(41, 41, 41); */
+    background-color: transparent;
+  
+  
+  }
+  .contacto{
+    background-color: transparent;
+  
+  
+  }
+  
+  
+  .containerTitle{
+    display: grid;
+    position: fixed;
+    /* align-items: center;
+    justify-content: center;
+    justify-items: center; */
+    width: 100%;
+    height: 100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    cursor: crosshair;
+    z-index: 5000;
+    top: 0;
+    justify-items: start;
+  
+  }
+  
+  .title{
+    color: #fafafa;
+  }
+
+  #button{
+    pointer-events: all;
+  }
+
+
+
+
+  /* HOME */
+  .topLayer{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+  }
+  .topLayer img{
+    width: auto;
+    height: 50px;
+  }

@@ -1,0 +1,31 @@
+.showGaleria{
+    display: grid;
+}
+
+.hideGaleria{
+    display: none;
+}
+
+.infoFotos .appleMusic{
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: start;
+    padding: 0;
+    margin: 0;
+    /* align-self: start; */
+}
+
+.infoFotos .appleMusic img{
+    padding: 0;
+    margin: 0;
+}
+
+.noScrollBar{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.noScrollBar::-webkit-scrollbar {
+    display: none;
+  }
+  
