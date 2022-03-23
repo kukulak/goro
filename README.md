@@ -1,5 +1,5 @@
 
-This project is made for  [Goro Goro Il](https://gorogoroil.com).
+This project is made for  [Goro Goro Il](http://gorogoroil.com).
 
 ## Goro Goro Il
 
