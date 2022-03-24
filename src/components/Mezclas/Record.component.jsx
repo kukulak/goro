@@ -109,29 +109,36 @@ const Record = (props) => {
 
         const randomNumber = Math.floor(Math.random()*-300)-300
 
-        gsap.to(mezclaRef.current, {
-            y: randomNumber,
-            scrollTrigger:{
-                trigger: mezclaRef.current,
-                start: 'top bottom',
-                end: 'bottom top-500',
-                markers: false,
-                id: 'discos',
-                scrub: 1,
-            }
-        })
+             ScrollTrigger.matchMedia({
+            "(min-width: 600px)": function() {
 
-        gsap.to(mezclaRef.current, {
-            opacity: 0.0,
-            scrollTrigger:{
-                trigger: mezclaRef.current,
-                start: 'top 300px',
-                end: '50% 200px',
-                markers: false,
-                id: 'opacity',
-                scrub: true,
-            }
-        })
+
+
+            gsap.to(mezclaRef.current, {
+                y: randomNumber,
+                scrollTrigger:{
+                    trigger: mezclaRef.current,
+                    start: 'top bottom',
+                    end: 'bottom top-500',
+                    markers: false,
+                    id: 'discos',
+                    scrub: 1,
+                }
+            })
+
+            gsap.to(mezclaRef.current, {
+                opacity: 0.0,
+                scrollTrigger:{
+                    trigger: mezclaRef.current,
+                    start: 'top 300px',
+                    end: '50% 200px',
+                    markers: false,
+                    id: 'opacity',
+                    scrub: true,
+                }
+            })
+        }
+    })
 
     }, [])
 
