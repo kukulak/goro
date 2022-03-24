@@ -36,7 +36,7 @@ function App() {
     {/* <Contacto/> */}
     {/* <SoundSystem /> */}
     {/* <Footer/> */}
-    <Background />
+    {/* <Background /> */}
 
     </div>
   );

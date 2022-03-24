@@ -39,6 +39,9 @@ export const HomeWrapper = styled.div`
 //   align-items: center;
 //   justify-content: center;
   position: fixed;
+  @media (max-width: 420px) {
+    porsition: relative;
+}
 `;
 
 export const LogoWrapper = styled.img`
