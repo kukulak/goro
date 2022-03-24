@@ -14,6 +14,7 @@ export const QuienesWraper = styled.div`
     grid-template-rows: 1fr 0.3fr 1fr;
     @media (max-width: 420px) {
         padding-top: 124vh;
+        padding-top: 50vh;
       }
 `
 

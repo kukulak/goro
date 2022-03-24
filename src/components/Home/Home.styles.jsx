@@ -53,11 +53,12 @@ export const LogoWrapper = styled.img`
     justify-self: center;
     align-self: center;
     @media (max-width: 420px) {
-      width: 367px;
-      margin: 152px 0 0;
+      width: 295px;
+      margin: -91px 0 0;
     }
     @media (max-width: 320px) {
       width: 280px;
+
     }
 
 `

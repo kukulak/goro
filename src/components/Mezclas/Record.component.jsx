@@ -35,56 +35,72 @@ const Record = (props) => {
 
     const manageOver = () => {
         console.log('HOVER')
-        gsap.to(mezclaRef.current,{
-           zIndex: 1000
+        ScrollTrigger.matchMedia({
+            "(min-width: 600px)": function() {
+                gsap.to(mezclaRef.current,{
+                    zIndex: 1000
+                 })
+                 
+                 gsap.to(recordRef.current,{
+                     rotation: -10,
+                     // y: -40,
+                     scale: 0.7,
+                     duration: 0.3,
+                     boxShadow:"10px 0px 20px 0px #000000ab",
+                     
+                 })
+         
+                 gsap.to(infoRef.current,{
+                     y: 0,
+                     duration: 0.3
+                 })
+         
+                 gsap.to(discoRef.current,{
+                     rotation: -35,
+                     scale: 0.6,
+                     y: -10,
+                     x: 90,
+                     duration: 0.5
+                 })
+            }
         })
+        // ScrollTrigger.matchMedia({
+        //     "(min-width: 600px)": function() {
+
+        //     }
+        // })
         
-        gsap.to(recordRef.current,{
-            rotation: -10,
-            // y: -40,
-            scale: 0.7,
-            duration: 0.3,
-            boxShadow:"10px 0px 20px 0px #000000ab",
-            
-        })
-
-        gsap.to(infoRef.current,{
-            y: 0,
-            duration: 0.3
-        })
-
-        gsap.to(discoRef.current,{
-            rotation: -35,
-            scale: 0.6,
-            y: -10,
-            x: 90,
-            duration: 0.5
-        })
+        
     }
     const manageOut = () => {
         console.log('OUT')
-        gsap.to(mezclaRef.current,{
-            zIndex: 1
+              ScrollTrigger.matchMedia({
+            "(min-width: 600px)": function() {
+                gsap.to(mezclaRef.current,{
+                    zIndex: 1
+                })
+                gsap.to(recordRef.current,{
+                    rotation: 0,
+                    y: 0,
+                    scale: 1.0,
+                    duration: 0.2,
+                    boxShadow:"0px 0px 0px 0px #000000aa",
+                    
+                })
+                gsap.to(infoRef.current,{
+                    y: 0,
+                    duration: 0.3
+                })
+                gsap.to(discoRef.current,{
+                    rotation: 0,
+                    scale: 0.6,
+                    y: 0,
+                    x: 0,
+                    duration: 0.3
+                })
+            }
         })
-        gsap.to(recordRef.current,{
-            rotation: 0,
-            y: 0,
-            scale: 1.0,
-            duration: 0.2,
-            boxShadow:"0px 0px 0px 0px #000000aa",
-            
-        })
-        gsap.to(infoRef.current,{
-            y: 0,
-            duration: 0.3
-        })
-        gsap.to(discoRef.current,{
-            rotation: 0,
-            scale: 0.6,
-            y: 0,
-            x: 0,
-            duration: 0.3
-        })
+      
     }
 
     useEffect(() => {

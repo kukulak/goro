@@ -36,45 +36,77 @@ const Home = () => {
 
 
     useEffect(()=>{
-        gsap.to(
-            loGoroRef.current, {
-                y: -350,
-                scale: 0.3,
-                opacity: 0,
-                // repeat: -1,
-                // yoyo: true,
-                scrollTrigger:{
-                    trigger: loGoroRef.current,
-                    start: 'bottom 500px',
-                    end: 'bottom top',
-                    markers: true,
-                    scrub: 0.1,
-                    id: 'loGoro',
-                    // onUpdate: (self) => console.log('update', self.progress.toFixed(3)),
-                    // onUpdate: (self) =>{
-                    //     console.log('it is updated')
-                    // },
+        ScrollTrigger.matchMedia({
+            "(min-width: 600px)": function() {
+            gsap.to(
+                loGoroRef.current, {
+                    y: -350,
+                    scale: 0.3,
+                    opacity: 0,
+                    // repeat: -1,
+                    // yoyo: true,
+                    scrollTrigger:{
+                        trigger: loGoroRef.current,
+                        start: 'bottom 500px',
+                        end: 'bottom top',
+                        markers: true,
+                        scrub: 0.1,
+                        id: 'loGoro',
+                        // onUpdate: (self) => console.log('update', self.progress.toFixed(3)),
+                        // onUpdate: (self) =>{
+                        //     console.log('it is updated')
+                        // },
+                    }
                 }
-            }
-        )
+            )
+
+        }
+    })
 
     }, [])
 
     const loGoroEsquinaRef = useRef()
     useEffect(()=> {
-        gsap.to(
-            loGoroEsquinaRef.current, {
-            y: 150, 
-            opacity: 1,
-            autoKill:false,
-            scrollTrigger:{
-                trigger: loGoroRef.current,
-                start: 'bottom 500px',
-                end: '320 top',
-                markers: false,
-                scrub: 2,
-                id: 'esquinado',
-            }
+        ScrollTrigger.matchMedia({
+            "(min-width: 600px)": function() {
+            gsap.to(
+                loGoroEsquinaRef.current, {
+                y: 150, 
+                opacity: 1,
+                autoKill:false,
+                scrollTrigger:{
+                    trigger: loGoroRef.current,
+                    start: 'bottom 500px',
+                    end: '320 top',
+                    markers: false,
+                    scrub: 2,
+                    id: 'esquinado',
+                }
+            })
+        }
+        })
+    })
+
+    useEffect(()=> {
+        ScrollTrigger.matchMedia({
+            "(min-width: 700px)": function() {
+            gsap.to(
+                loGoroRef.current, {
+                y: -150, 
+                rotation: 50,
+                opacity: 1,
+                autoKill:false,
+                scrollTrigger:{
+                    trigger: loGoroRef.current,
+                    start: 'bottom 500px',
+                    end: '320 top',
+                    markers: false,
+                    scrub: 2,
+                    id: 'esquinado',
+                }
+            })
+
+        }
         })
     })
     
