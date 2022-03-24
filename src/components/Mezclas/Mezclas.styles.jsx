@@ -20,7 +20,7 @@ export const MezclaWraper = styled.div`
     pointer-events: all;
     @media (max-width: 420px) {
         width: 300px;
-        margin: 300px 0;
+        margin:  20px 0 200px;
     }
 `
 
