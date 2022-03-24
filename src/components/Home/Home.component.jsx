@@ -66,6 +66,7 @@ const Home = () => {
             loGoroEsquinaRef.current, {
             y: 150, 
             opacity: 1,
+            autoKill:false,
             scrollTrigger:{
                 trigger: loGoroRef.current,
                 start: 'bottom 500px',
