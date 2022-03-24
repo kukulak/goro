@@ -40,7 +40,7 @@ export const HomeWrapper = styled.div`
 //   justify-content: center;
   position: fixed;
   @media (max-width: 420px) {
-    porsition: relative;
+    position: relative;
 }
 `;
 
