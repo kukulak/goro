@@ -24,6 +24,10 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 import '../../soundtest.styles.css'
 
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
 const Home = () => {
     
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -32,10 +36,37 @@ const Home = () => {
     // const [snd1, setsnd1] = useState(null)
     
     const loGoroRef = useRef()
-   
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
 
     useEffect(()=>{
+
+        // ScrollTrigger.matchMedia({
+        //     "(min-width: 768px)": function() {
+        //     gsap.to(
+        //         loGoroRef.current, {
+        //         y: -150, 
+        //         // rotation: 50,
+        //         opacity: 0,
+        //         // opacity: 1,
+        //         scrollTrigger:{
+        //             trigger: loGoroRef.current,
+        //             start: 'bottom 500px',
+        //             end: '320 top',
+        //             markers: false,
+        //             scrub: 2,
+        //             id: 'esquinado',
+        //             // invalidateOnRefresh: true,
+        //             // onRefresh: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
+        //         }
+        //     })
+    
+        // }
+        // })
+
         ScrollTrigger.matchMedia({
             "(min-width: 600px)": function() {
             gsap.to(
@@ -63,6 +94,8 @@ const Home = () => {
         }
     })
 
+ 
+
     }, [])
 
     const loGoroEsquinaRef = useRef()
@@ -73,7 +106,6 @@ const Home = () => {
                 loGoroEsquinaRef.current, {
                 y: 150, 
                 opacity: 1,
-                autoKill:false,
                 scrollTrigger:{
                     trigger: loGoroRef.current,
                     start: 'bottom 500px',
@@ -87,28 +119,30 @@ const Home = () => {
         })
     })
 
-    useEffect(()=> {
-        ScrollTrigger.matchMedia({
-            "(min-width: 700px)": function() {
-            gsap.to(
-                loGoroRef.current, {
-                y: -150, 
-                rotation: 50,
-                opacity: 1,
-                autoKill:false,
-                scrollTrigger:{
-                    trigger: loGoroRef.current,
-                    start: 'bottom 500px',
-                    end: '320 top',
-                    markers: false,
-                    scrub: 2,
-                    id: 'esquinado',
-                }
-            })
+    // useEffect(()=> {
+    //     ScrollTrigger.matchMedia({
+    //         "(min-width: 768px)": function() {
+    //         gsap.to(
+    //             loGoroRef.current, {
+    //             y: -150, 
+    //             // rotation: 50,
+    //             opacity: 0,
+    //             // opacity: 1,
+    //             scrollTrigger:{
+    //                 trigger: loGoroRef.current,
+    //                 start: 'bottom 500px',
+    //                 end: '320 top',
+    //                 markers: false,
+    //                 scrub: 2,
+    //                 id: 'esquinado',
+    //                 // invalidateOnRefresh: true,
+    //                 // onRefresh: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
+    //             }
+    //         })
 
-        }
-        })
-    })
+    //     }
+    //     })
+    // }, [])
     
 
 

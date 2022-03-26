@@ -36,7 +36,7 @@ const Record = (props) => {
     const manageOver = () => {
         console.log('HOVER')
         ScrollTrigger.matchMedia({
-            "(min-width: 600px)": function() {
+            "(min-width: 769px)": function() {
                 gsap.to(mezclaRef.current,{
                     zIndex: 1000
                  })
@@ -75,7 +75,7 @@ const Record = (props) => {
     const manageOut = () => {
         console.log('OUT')
               ScrollTrigger.matchMedia({
-            "(min-width: 600px)": function() {
+            "(min-width: 769px)": function() {
                 gsap.to(mezclaRef.current,{
                     zIndex: 1
                 })
@@ -110,7 +110,7 @@ const Record = (props) => {
         const randomNumber = Math.floor(Math.random()*-300)-300
 
              ScrollTrigger.matchMedia({
-            "(min-width: 600px)": function() {
+            "(min-width: 769px)": function() {
 
 
 

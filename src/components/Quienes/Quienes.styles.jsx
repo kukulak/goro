@@ -12,10 +12,11 @@ export const QuienesWraper = styled.div`
     justify-content: center;
     justify-items: center;
     grid-template-rows: 1fr 0.3fr 1fr;
-    @media (max-width: 420px) {
+    @media (max-width: 768px) {
         padding-top: 124vh;
         padding-top: 50vh;
       }
+  
 `
 
 export const TitleWraper = styled.h1`
@@ -34,6 +35,10 @@ export const ParaghraphWraper = styled.p`
     grid-row: 1;
     grid-column: 1;
     margin-left: -310px;
+    @media (max-width: 768px) {
+        font-size: 38px;
+        margin-left: 0px;
+        }
     @media (max-width: 420px) {
         font-size: 24px;
         margin-left: 0px;

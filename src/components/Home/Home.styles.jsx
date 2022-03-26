@@ -39,7 +39,7 @@ export const HomeWrapper = styled.div`
 //   align-items: center;
 //   justify-content: center;
   position: fixed;
-  @media (max-width: 420px) {
+  @media (max-width: 768px) {
     position: relative;
 }
 `;
@@ -52,10 +52,15 @@ export const LogoWrapper = styled.img`
     grid-row: 1;
     justify-self: center;
     align-self: center;
+    @media (max-width: 768px) {
+      width: 500px;
+    }
+
     @media (max-width: 420px) {
       width: 295px;
       margin: -91px 0 0;
     }
+
     @media (max-width: 320px) {
       width: 280px;
 
@@ -120,6 +125,9 @@ export const MenuWrapper = styled.div`
     justify-self: end;
     align-self: start;
     padding: 100px 30px;
+    @media (max-width: 768px) {
+      display: none;
+    }
     @media (max-width: 420px) {
       display: none;
     }

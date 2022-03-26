@@ -18,9 +18,13 @@ export const MezclaWraper = styled.div`
     display: grid;
     flex-direction: column;
     pointer-events: all;
+    @media (max-width: 768px) {
+        width: 436px;
+        margin:  20px 0 20px;
+        }
     @media (max-width: 420px) {
         width: 300px;
-        margin:  20px 0 200px;
+        margin:  20px 0 120px;
     }
 `
 
@@ -32,6 +36,12 @@ export const InfoRecordWraper = styled.div`
     grid-template-rows: 1fr 1fr;
     // z-index: 15;
     pointer-events: none;
+    @media (max-width: 768px) {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 140px;
+        }
     @media (max-width: 420px) {
         width: 300px;
         grid-template-columns: 1fr;
@@ -49,8 +59,16 @@ export const RecordWraper = styled.div`
     // grid-row: 1;
     grid-column: 1;
     pointer-events: none;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+        &:nth-child(odd) {
+            background: blue;
+        }
+        }
     @media (max-width: 420px) {
         grid-template-columns: 1fr;
+        column-gap: 220px;
     }
 `
 
@@ -65,12 +83,19 @@ export const RecordImageWraper = styled.img`
     grid-column: 1;
     grid-row: 1;
     z-index: 10;
+    @media (max-width: 768px) {
+        width: 400px;
+        height: 410px;
+        margin-left: -27px;
+        transform: rotate(-15deg) scale(0.7)
+    }
     @media (max-width: 420px) {
         width: 300px;
         height: 310px;
         margin-left: -27px;
         transform: rotate(-15deg) scale(0.7)
     }
+
 `
 
 
@@ -83,6 +108,13 @@ export const DiscWraper = styled.img`
     height: 100%;
     width: 100%;
     user-select: none;
+    @media (max-width: 768px) {
+        width: 400px;
+        height: 410px;
+        margin-left: 36px;
+        margin-top: -21px;
+        transform: rotate(-35deg) scale(0.6)
+    }
     @media (max-width: 420px) {
         width: 300px;
         height: 310px;
@@ -103,6 +135,16 @@ export const LinkAppleWraper = styled.div`
     background-repeat: no-repeat;
     background-position-y: 50%;
     pointer-events: none;
+    @media (max-width: 768px) {
+        // grid-column: 1;
+        // grid-row: 1;
+        // grid-row-start: 1;
+        // grid-row-end: 1;
+        width: 120px;
+        // justify-self: end;
+        margin-top: -30px;
+        // margin-right: 8px;
+    }
     @media (max-width: 420px) {
         grid-column: 1;
         grid-row: 1;

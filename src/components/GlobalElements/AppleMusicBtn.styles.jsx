@@ -30,6 +30,9 @@ export const LogoWrapper = styled.img`
       height: 29px;
       margin: 11px 15px; 
     }
+    @media (max-width: 320px) {
+      margin: 6px 9px; 
+    }
     `
     
 export const AppleMusicWraper = styled.button`
@@ -44,9 +47,13 @@ export const AppleMusicWraper = styled.button`
     user-select: all;
     pointer-events: all;
     cursor: pointer;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
     @media (max-width: 420px) {
       padding: 0;
     }
+  
 `
 
 export const PlayListWraper = styled.div`

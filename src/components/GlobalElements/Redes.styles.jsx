@@ -58,6 +58,9 @@ export const IconsRedesWrapper = styled.img`
     @media (max-width: 420px) {
       height: 30px;
     }
+    @media (max-width: 320px) {
+      height: 28px;
+    }
     `
     
 export const RedesWraper = styled.div`
@@ -70,6 +73,7 @@ export const RedesWraper = styled.div`
     @media (max-width: 420px) {
       padding: 0px;
     }
+
 `
 
 
@@ -86,6 +90,9 @@ export const RedBtnWraper = styled.button`
     margin: 20px;
     @media (max-width: 420px) {
       margin: 10px;
+    }
+    @media (max-width: 320px) {
+      margin: 5px;
     }
 `
 
@@ -137,5 +144,4 @@ export const IconMenuWrapper = styled.img`
   height: 12px;
   margin: 0 5px 0 0;
   transform: rotate(40deg);
-
 `
