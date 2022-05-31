@@ -23,8 +23,10 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 const Record = (props) => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
     const manageClick = (open) => {
         window.open(open, '_blank')
+        console.log('clicked')
     }
 
     const recordRef = useRef()
@@ -33,9 +35,37 @@ const Record = (props) => {
     const discoRef = useRef()
 
 
+
     const manageOver = () => {
         console.log('HOVER')
         ScrollTrigger.matchMedia({
+            "(min-width: 1280px)": function() {
+                gsap.to(mezclaRef.current,{
+                    zIndex: 1000
+                 })
+                 
+                 gsap.to(recordRef.current,{
+                     rotation: -10,
+                     // y: -40,
+                     scale: 0.7,
+                     duration: 0.3,
+                     boxShadow:"10px 0px 20px 0px #000000ab",
+                     
+                 })
+         
+                 gsap.to(infoRef.current,{
+                     y: 0,
+                     duration: 0.3
+                 })
+         
+                 gsap.to(discoRef.current,{
+                     rotation: -35,
+                     scale: 0.6,
+                     y: -10,
+                     x: 90,
+                     duration: 0.5
+                 })
+            }, 
             "(min-width: 769px)": function() {
                 gsap.to(mezclaRef.current,{
                     zIndex: 1000
@@ -75,6 +105,30 @@ const Record = (props) => {
     const manageOut = () => {
         console.log('OUT')
               ScrollTrigger.matchMedia({
+            "(min-width: 1280px)": function() {
+                gsap.to(mezclaRef.current,{
+                    zIndex: 1
+                })
+                gsap.to(recordRef.current,{
+                    rotation: 0,
+                    y: 0,
+                    scale: 1.0,
+                    duration: 0.2,
+                    boxShadow:"0px 0px 0px 0px #000000aa",
+                    
+                })
+                gsap.to(infoRef.current,{
+                    y: 0,
+                    duration: 0.3
+                })
+                gsap.to(discoRef.current,{
+                    rotation: 0,
+                    scale: 0.6,
+                    y: 0,
+                    x: 0,
+                    duration: 0.3
+                })
+            },
             "(min-width: 769px)": function() {
                 gsap.to(mezclaRef.current,{
                     zIndex: 1
@@ -106,14 +160,40 @@ const Record = (props) => {
     useEffect(() => {
         mezclaRef.current.addEventListener('mouseover', manageOver )
         mezclaRef.current.addEventListener('mouseout', manageOut )
+        // mezclaRef.current.addEventListener('click', manageClick )
 
         const randomNumber = Math.floor(Math.random()*-300)-300
 
              ScrollTrigger.matchMedia({
-            "(min-width: 769px)": function() {
+            "(min-width: 1280px)": function() {
 
 
 
+            gsap.to(mezclaRef.current, {
+                y: randomNumber,
+                scrollTrigger:{
+                    trigger: mezclaRef.current,
+                    start: 'top bottom',
+                    end: 'bottom top-500',
+                    markers: false,
+                    id: 'discos',
+                    scrub: 1,
+                }
+            })
+
+            gsap.to(mezclaRef.current, {
+                opacity: 0.0,
+                scrollTrigger:{
+                    trigger: mezclaRef.current,
+                    start: 'top 300px',
+                    end: '50% 200px',
+                    markers: false,
+                    id: 'opacity',
+                    scrub: true,
+                }
+            })
+        },
+        "(min-width: 769px)": function() {
             gsap.to(mezclaRef.current, {
                 y: randomNumber,
                 scrollTrigger:{
@@ -145,7 +225,7 @@ const Record = (props) => {
 
 
     return(
-        <MezclaWraper className='fullDisc' ref={mezclaRef}>
+        <MezclaWraper className='fullDisc' ref={mezclaRef} onClick={() => manageClick(props.link)}>
             <RecordImageWraper src={props.portada} ref={recordRef} />
 
             <DiscWraper ref={discoRef} src={disco} />
@@ -159,7 +239,7 @@ const Record = (props) => {
                     {props.artista}
                 </ParaghraphWraper>
 
-                <LinkAppleWraper>
+                <LinkAppleWraper className={props.plataforma}>
                 </LinkAppleWraper>
             </InfoRecordWraper>
 

@@ -41,7 +41,7 @@ export const AppleMusicWraper = styled.button`
     grid-row: 1;
     justify-self: end;
     align-self: end;
-    padding: 30px;
+    // padding: 30px;
     background-color: transparent;
     border: none;
     user-select: all;

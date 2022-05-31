@@ -17,7 +17,7 @@ export const themeGoroGoro = {
       secondary: "14px",
       title: "300px",
       big: "100px",
-      mid: "50px",
+      mid: "35px",
     },
   };
 

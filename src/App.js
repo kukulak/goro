@@ -10,6 +10,7 @@ import GaleriaInstagram from './components/GaleriaInstagram/GaleriaInstagram.com
 import Contacto from './components/Contacto/Contacto.component';
 import Footer from './components/Footer/Footer.component'
 import Background from './components/Background/Background.component'
+import VideoHome from './components/VideoHome/VideoHome.component';
 function App() {
   return (
     <div className="App">
@@ -28,15 +29,16 @@ function App() {
         </a>
       </header> */}
     <Home />
+    <VideoHome/>
     <Quienes />
     <Mezclas />
-    {/* <Testimoniales /> */}
     {/* <Galeria/> */}
+    {/* <Testimoniales /> */}
     {/* <GaleriaInstagram/> */}
     {/* <Contacto/> */}
     {/* <SoundSystem /> */}
-    {/* <Footer/> */}
-    {/* <Background /> */}
+    <Footer/>
+    <Background />
 
     </div>
   );

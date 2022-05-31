@@ -18,6 +18,11 @@ export const MezclaWraper = styled.div`
     display: grid;
     flex-direction: column;
     pointer-events: all;
+    cursor: pointer;
+    @media (max-width: 1300px) {
+        width: 436px;
+        margin:  20px 0 20px;
+        }
     @media (max-width: 768px) {
         width: 436px;
         margin:  20px 0 20px;
@@ -36,11 +41,19 @@ export const InfoRecordWraper = styled.div`
     grid-template-rows: 1fr 1fr;
     // z-index: 15;
     pointer-events: none;
+    @media (max-width: 1300px) {
+        width: 100%;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 140px;
+        width: 400px;
+        }
     @media (max-width: 768px) {
         width: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         height: 140px;
+        width: 410px;
         }
     @media (max-width: 420px) {
         width: 300px;
@@ -83,6 +96,12 @@ export const RecordImageWraper = styled.img`
     grid-column: 1;
     grid-row: 1;
     z-index: 10;
+    @media (max-width: 1280px) {
+        width: 400px;
+        height: 410px;
+        margin-left: 1px;
+        transform: rotate(-15deg) scale(0.7)
+    }
     @media (max-width: 768px) {
         width: 400px;
         height: 410px;
@@ -108,6 +127,13 @@ export const DiscWraper = styled.img`
     height: 100%;
     width: 100%;
     user-select: none;
+    @media (max-width: 1280px) {
+        width: 400px;
+        height: 410px;
+        margin-left: 36px;
+        margin-top: -21px;
+        transform: rotate(-35deg) scale(0.6)
+    }
     @media (max-width: 768px) {
         width: 400px;
         height: 410px;
@@ -131,7 +157,7 @@ export const LinkAppleWraper = styled.div`
     grid-row: 1;
     grid-row-start: 1;
     grid-row-end: 3;
-    background-image: url(${appleMusic});
+    // background-image: url(${appleMusic});
     background-repeat: no-repeat;
     background-position-y: 50%;
     pointer-events: none;
@@ -175,6 +201,11 @@ export const RecordNameWraper = styled.h3`
     user-select: none;
     pointer-events: none;
     text-align: left;
+    @media (max-width: 1300px) {
+    font-size: 1.7em;
+
+    }
+
 `
 
 export const ParaghraphWraper = styled.p`
@@ -183,6 +214,7 @@ export const ParaghraphWraper = styled.p`
     grid-column: 1;
     grid-row: 2;
     margin: 0 0 0;
+    text-align: left;
     justify-self: start;
     font-size: 1.5em;
     font-weight: 200;

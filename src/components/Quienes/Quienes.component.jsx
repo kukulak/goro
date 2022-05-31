@@ -4,6 +4,7 @@ import {
         TitleWraper,
         ParaghraphWraper,
         GrupoServiciosWrapper,
+        SecondGrupoServiciosWrapper,
         TitleHomeWraper
         } from './Quienes.styles'
 // GSAP
@@ -19,38 +20,65 @@ const Quienes = () =>{
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     const serviciosRef = useRef()
+    const serviciosRefInverse = useRef()
     const quienesRef = useRef()
     // const titleRef = useRef()
 
-    useEffect(() => {
-        let horizontal = gsap.timeline();
-        // let l = serviciosRef.getTotalLength();
-        horizontal.fromTo(
-            serviciosRef.current, {
-            x: 0
-        },
-        {
-            x: -3300,
-            rotationY: 20,
-            rotationZ: 2, 
-        })
-        const totalHeight = window.innerHeight
-        console.log('totalHeight', totalHeight)
-        ScrollTrigger.create({ // first circle animation
-            trigger: serviciosRef.current,
-            start: `top ${totalHeight-250}`,
-            end: "bottom 100px",
-            markers: false,
-            animation: horizontal,
-            id: 'servicios',
-            ease: "power2",
-            scrub: 10,
+    // useEffect(() => {
+    //     let horizontal = gsap.timeline();
+    //     // let l = serviciosRef.getTotalLength();
+    //     horizontal.fromTo(
+    //         serviciosRef.current, {
+    //         x: 0
+    //     },
+    //     {
+    //         x: -4300,
+    //         rotationY: 20,
+    //         rotationZ: 2, 
+    //     })
+    //     const totalHeight = window.innerHeight
+    //     console.log('totalHeight', totalHeight)
+    //     ScrollTrigger.create({ // first circle animation
+    //         trigger: serviciosRef.current,
+    //         start: `top ${totalHeight-250}`,
+    //         end: "bottom 100px",
+    //         markers: false,
+    //         animation: horizontal,
+    //         id: 'servicios',
+    //         ease: "power2",
+    //         scrub: 10,
 
            
-        });
+    //     });
 
 
-    })
+    // })
+
+
+    useEffect(() => {
+        let horizontal = gsap.timeline();
+        horizontal.to(
+            serviciosRef.current, {
+            x: '-=6350',
+            yoyo: true,
+            ease: 'none',
+            duration: 50,
+            repeat: -1,
+        })
+      })
+
+    useEffect(() => {
+        let horizontal = gsap.timeline();
+        horizontal.to(
+            serviciosRefInverse.current, {
+            x: '+=6350',
+            yoyo: true,
+            ease: 'none',
+            duration: 50,
+            repeat: -1,
+        })
+      })
+
 
     useEffect(() => {
         gsap.to(quienesRef.current, {
@@ -85,16 +113,14 @@ const Quienes = () =>{
             {/* </TitleHomeWraper> */}
                 
             <ParaghraphWraper ref={quienesRef}>
-                Somos un laboratorio<br />
-                de inmersión sonora,<br />
-                producimos experiencias<br />
-                integrales de audio.<br />
-                Sabemos lo que hacemos,<br />
-                hacemos lo que nos apaciona.<br />
+                Goro Goro Immersive Lab es un <br />estudio boutique que está <br />idealmente ubicado en el corazón <br />de la Ciudad de México. <br />Somos un laboratorio formado por <br />ingenieros y artistas creativos <br />dedicados a experiencias <br />audiovisuales inmersivas que <br />utilizan tecnología de punta.<br />
             </ParaghraphWraper>
             <GrupoServiciosWrapper ref={serviciosRef}>
                 <Servicios />
             </GrupoServiciosWrapper>
+            <SecondGrupoServiciosWrapper ref={serviciosRefInverse}>
+                <Servicios />
+            </SecondGrupoServiciosWrapper>
         </QuienesWraper>
     )
 }

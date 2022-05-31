@@ -11,64 +11,48 @@ import {
         } from './Mezclas.styles'
 
 import Title from '../GlobalElements/Title.component' 
-import metallica from '../../discos/metallica.png'
-import blur from '../../discos/blur.png'
-import pinkfloyd from '../../discos/pinkf.png'
-import led from '../../discos/ledZeppelin.png'
+import olga from '../../discos/olga1000x1000bb-60.jpeg'
+import mujerEsperanza from '../../discos/mujerEsperanza1000x1000bb.webp'
+import mxf from '../../discos/mxfBig.jpeg'
+import muva from '../../discos/muva.jpg'
 import smashing from '../../discos/smash.png'
 import nirvana from '../../discos/nirvana.png'
 
+import './Mezclas.styles.css'
 
 
 const mezclasApi = [
     {
-        nombre: 'La pieza',
-        artista: 'Los Razcalaska',
-        link: 'apple/music/alla/vamos',
+        nombre: "Tañón Pal' Combo Es Lo Que Hay",
+        artista: 'Olga Tañon',
+        link: 'https://music.apple.com/mx/album/el-jala-jala/1593462122?i=1593462123',
+        plataforma: 'AppleMusic',
         id: 'record000',
-        portada: metallica,
+        portada: olga,
     },
     {
-        nombre: 'El ritmo',
-        artista: 'Razcalaska',
-        link: 'apple/music/alla/vamos',
+        nombre: 'Mujer Esperanza',
+        artista: 'Luz María Carriquiry',
+        link: 'https://music.apple.com/us/album/_/1592051666?app=music&at=1000lHKX&ct=linktree_http&i=1592051669&itscg=30200&itsct=lt_m&ls=1&mt=1',
+        plataforma: 'AppleMusic',
         id: 'record001',
-        portada: blur,
+        portada: mujerEsperanza,
     },
     {
-        nombre: 'La canción',
-        artista: 'Los Pergas',
-        link: 'apple/music/alla/vamos',
+        nombre: 'Rasgar',
+        artista: 'MEXFUTURA',
+        link: 'https://youtu.be/73Ic501fa6A',
+        plataforma: 'YouTube',
         id: 'record002',
-        portada: pinkfloyd
+        portada: mxf
     },
     {
-        nombre: 'La música',
-        artista: 'Los SanosSonideros',
-        link: 'apple/music/alla/vamos',
+        nombre: 'O Fortuna',
+        artista: 'Muva',
+        link: 'https://youtu.be/9joBQj2BSGg',
+        plataforma: 'YouTube',
         id: 'record003',
-        portada: led,
-    },
-    {
-        nombre: 'El sonido',
-        artista: 'Los Nebraska',
-        link: 'apple/music/alla/vamos',
-        id: 'record004',
-        portada: smashing,
-    },
-    {
-        nombre: 'La combinación',
-        artista: 'Los Rapaleta',
-        link: 'apple/music/alla/vamos',
-        id: 'record005',
-        portada: nirvana
-    },
-    {
-        nombre: 'Las notas',
-        artista: 'Los Sanso',
-        link: 'apple/music/alla/vamos',
-        id: 'record006',
-        portada: led,
+        portada: muva   ,
     }
 ]
 
@@ -80,7 +64,7 @@ const Mezclas = () => {
 
             <RecordWraper>
                 {mezclasApi.map((mezcla)=>
-                    <Record portada={mezcla.portada} key={mezcla.id} nombre={mezcla.nombre} artista={mezcla.artista} link={mezcla.link} />
+                    <Record portada={mezcla.portada} key={mezcla.id} nombre={mezcla.nombre} artista={mezcla.artista} link={mezcla.link} plataforma={mezcla.plataforma} />
                     )}
             </RecordWraper>
 

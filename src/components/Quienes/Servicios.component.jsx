@@ -5,53 +5,53 @@ import {
         } from './Quienes.styles'
 const listServicios = [
     {
-        name: 'Sonorización',
+        name: 'Mix Dolby Atmos',
         id: 'ls1'
     },
     {
-        name: 'Diseño de Audio',
+        name: 'Mix Ambisonics',
         id: 'ls2'
     },
     {
-        name: 'Inmersión 3d',
+        name: 'Mix tradicional',
         id: 'ls3'
     },
     {
-        name: 'Estudio de Grabación',
+        name: 'PreMix postproducción (5.1, 7.1 & Dolby Atmos)',
         id: 'ls4'
     },
     {
-        name: 'Sonorización',
+        name: 'Mix Sonido inmersivo Live',
         id: 'ls5'
     },
     {
-        name: 'Diseño de Audio',
+        name: 'Producciones audio visuales en formatos inmersivos',
         id: 'ls6'
     },
-    {
-        name: 'Inmersión 3d',
-        id: 'ls7'
-    },
-    {
-        name: 'Estudio de Grabación',
-        id: 'ls8'
-    },
-    {
-        name: 'Sonorización',
-        id: 'ls9'
-    },
-    {
-        name: 'Diseño de Audio',
-        id: 'ls10'
-    },
-    {
-        name: 'Inmersión 3d',
-        id: 'ls11'
-    },
-    {
-        name: 'Estudio de Grabación',
-        id: 'ls12'
-    },
+    // {
+    //     name: 'Mix Dolby Atmos',
+    //     id: 'ls7'
+    // },
+    // {
+    //     name: 'Mix Ambisonics',
+    //     id: 'ls8'
+    // },
+    // {
+    //     name: 'Mix tradicional',
+    //     id: 'ls9'
+    // },
+    // {
+    //     name: 'PreMix postproducción (5.1, 7.1 & Dolby Atmos)',
+    //     id: 'ls10'
+    // },
+    // {
+    //     name: 'Mix Sonido inmersivo Live',
+    //     id: 'ls11'
+    // },
+    // {
+    //     name: 'Producciones audio visuales en formatos inmersivos',
+    //     id: 'ls12'
+    // },
 ]
 
 const Servicios = () => {

@@ -106,7 +106,7 @@ const Wave = () => {
 
 const Scene = () => {
   return (
-    <div style={{ position: "fixed", width: "100%", height: "100%", zIndex: -1 }}>
+    <div style={{ position: "fixed", width: "110%", height: "110%", zIndex: -1 }}>
     <Canvas camera={{ fov: 5, position: [0, 0, 5] }}>
       <Suspense fallback={null}>
         <Wave />

@@ -13,6 +13,10 @@ export const TitleWraper = styled.h2`
 
     //
     margin-top: -230px;
+    @media (max-width: 1300px) {
+        font-size: 200px;
+        margin-top: -100px;
+        }
     @media (max-width: 768px) {
         font-size: 90px;
         margin-top: -100px;

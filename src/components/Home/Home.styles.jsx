@@ -36,6 +36,7 @@ export const HomeWrapper = styled.div`
   display: grid;
   user-select: none;
   pointer-events: none;
+  z-index: 5000;
 //   align-items: center;
 //   justify-content: center;
   position: fixed;
@@ -52,6 +53,9 @@ export const LogoWrapper = styled.img`
     grid-row: 1;
     justify-self: center;
     align-self: center;
+    @media (max-width: 1283px) {
+      width: 500px;
+    }
     @media (max-width: 768px) {
       width: 500px;
     }

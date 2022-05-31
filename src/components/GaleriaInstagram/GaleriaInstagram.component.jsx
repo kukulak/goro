@@ -142,7 +142,7 @@ const GaleriaInstagram = () => {
                 end: 'bottom top',
                 markers: false,
                 id: 'colUno',
-                scrub: 1,
+                scrub: 5,
             }
         })
 
@@ -155,7 +155,7 @@ const GaleriaInstagram = () => {
                 end: 'bottom top',
                 markers: false,
                 id: 'colUno',
-                scrub: 1,
+                scrub: 5,
             }
         })
 
@@ -167,7 +167,7 @@ const GaleriaInstagram = () => {
                 end: 'bottom top',
                 markers: false,
                 id: 'colDos',
-                scrub: 1,
+                scrub: 5,
             }
         })
 
@@ -179,7 +179,7 @@ const GaleriaInstagram = () => {
                 end: 'bottom top',
                 markers: false,
                 id: 'colTres',
-                scrub: 1,
+                scrub: 5,
             }
         })
 
@@ -191,7 +191,7 @@ const GaleriaInstagram = () => {
                 end: 'bottom top',
                 markers: false,
                 id: 'colCuatro',
-                scrub: 1,
+                scrub: 5,
             }
         })
 

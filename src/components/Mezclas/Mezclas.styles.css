@@ -1,0 +1,13 @@
+.AppleMusic{
+    background-image: url(../../icons/logo_appleMusic.svg);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+}
+
+.YouTube{
+    background-image: url(../../icons/icon_youTube.svg);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-size: 50%;
+    background-position-x: right;
+}
