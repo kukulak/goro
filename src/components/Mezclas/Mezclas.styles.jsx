@@ -7,6 +7,7 @@ import appleMusic from '../../icons/logo_appleMusic.svg'
 export const MezclasWraper = styled.div`
     background-color: transparent;
     display: grid;
+    justify-content: center;
     // grid-template-rows: 1fr 0.3fr;
    
     `
@@ -20,7 +21,7 @@ export const MezclaWraper = styled.div`
     pointer-events: all;
     cursor: pointer;
     @media (max-width: 1300px) {
-        width: 436px;
+        width: 350px;
         margin:  20px 0 20px;
         }
     @media (max-width: 768px) {
@@ -46,7 +47,7 @@ export const InfoRecordWraper = styled.div`
         grid-template-columns: 1fr 0.5fr;
         grid-template-rows: 1fr 1fr 1fr;
         height: 140px;
-        width: 400px;
+        ${'' /* width: 400px; */}
         }
     @media (max-width: 768px) {
         width: 100%;
@@ -72,6 +73,9 @@ export const RecordWraper = styled.div`
     // grid-row: 1;
     grid-column: 1;
     pointer-events: none;
+    @media(max-width: 1400px){
+        column-gap: 120px;
+    }
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         column-gap: 0px;
@@ -89,6 +93,8 @@ export const RecordImageWraper = styled.img`
     background-color: ${() => themeGoroGoro.colors.tertiary};
     width: 500px;
     height: 510px;
+    width: 100%;
+    height: 100%;
     transition: 10ms;
     cursor: pointer;
     pointer-events: none;
@@ -96,9 +102,9 @@ export const RecordImageWraper = styled.img`
     grid-column: 1;
     grid-row: 1;
     z-index: 10;
-    @media (max-width: 1280px) {
-        width: 400px;
-        height: 410px;
+    @media (max-width: 1300px) {
+        width: 100%;
+        height: 100%;
         margin-left: 1px;
         transform: rotate(-15deg) scale(0.7)
     }
@@ -127,11 +133,15 @@ export const DiscWraper = styled.img`
     height: 100%;
     width: 100%;
     user-select: none;
-    @media (max-width: 1280px) {
+    @media (max-width: 1300px) {
         width: 400px;
         height: 410px;
-        margin-left: 36px;
-        margin-top: -21px;
+        height: 100%;
+        width: 100%;
+        margin-left: 33px;
+        margin-top: -23px;
+        ${'' /* margin-left: 36px; */}
+        ${'' /* margin-top: -21px; */}
         transform: rotate(-35deg) scale(0.6)
     }
     @media (max-width: 768px) {

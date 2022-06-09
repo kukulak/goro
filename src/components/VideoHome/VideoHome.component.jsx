@@ -19,8 +19,8 @@ const VideoHome = () => {
     return(
         <>
         <SpaceCien />
-        <VideoContainerWraper ref={videoRef}>
-            <VideoWraper autoPlay muted controls='true' src={video}></VideoWraper>
+        <VideoContainerWraper className='videoContainer' ref={videoRef}>
+            <VideoWraper className='video' autoPlay muted controls='true' src={video}></VideoWraper>
         </VideoContainerWraper>
         </>
     )

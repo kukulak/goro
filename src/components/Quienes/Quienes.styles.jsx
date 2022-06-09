@@ -83,6 +83,9 @@ export const TxtServiciosWrapper = styled.p`
     font-weight: 100;
     padding: 0;
     margin: 0;
+    @media (max-width: 1300px) {
+        font-size: 80px;
+        }
     @media (max-width: 420px) {
         font-size: 32px;
       }

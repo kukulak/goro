@@ -1,0 +1,41 @@
+.dolbyMarcara{
+    mask-image: url('../../icons/texto-studio.svg');
+    mask-size: 25%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
+
+.theH{
+    /* height: 100vh; */
+}
+
+.infoEstudio{
+    margin: 250px 0 100px;
+    color: #d4d4d4;
+    text-align: left;
+    /* padding: 10% 20%; */
+    font-family: 'kanit';
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.equipoContainer{
+    background-color: #1a0019;
+    padding: 10% 20%;
+}
+
+p{
+    font-size: larger;
+}
+
+h1{
+    font-size: 50px;
+    margin: 30px 0 -20px 0;
+    color: #393939;
+}
+
+.infoP{
+    margin: 13px 0 0 40px;
+}

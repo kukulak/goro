@@ -57,26 +57,55 @@ const Quienes = () =>{
 
     useEffect(() => {
         let horizontal = gsap.timeline();
-        horizontal.to(
-            serviciosRef.current, {
-            x: '-=6350',
-            yoyo: true,
-            ease: 'none',
-            duration: 50,
-            repeat: -1,
+        ScrollTrigger.matchMedia({
+            "(min-width: 1300px)": function() {
+                horizontal.to(
+                    serviciosRef.current, {
+                    x: '-=6350',
+                    yoyo: true,
+                    ease: 'none',
+                    duration: 50,
+                    repeat: -1,
+                })
+            },
+            "(min-width: 769px)": function() {
+                horizontal.to(
+                    serviciosRef.current, {
+                    x: '-=5450',
+                    yoyo: true,
+                    ease: 'none',
+                    duration: 50,
+                    repeat: -1,
+                })
+            }
         })
       })
 
     useEffect(() => {
         let horizontal = gsap.timeline();
-        horizontal.to(
-            serviciosRefInverse.current, {
-            x: '+=6350',
-            yoyo: true,
-            ease: 'none',
-            duration: 50,
-            repeat: -1,
+        ScrollTrigger.matchMedia({
+            "(min-width:1300px)": function(){
+                horizontal.to(
+                    serviciosRefInverse.current, {
+                    x: '+=6350',
+                    yoyo: true,
+                    ease: 'none',
+                    duration: 50,
+                    repeat: -1,
+                })
+            },
+            "(min-width: 769px)": function(){
+                horizontal.to(
+                    serviciosRefInverse.current, {
+                    x: '+=5450',
+                    yoyo: true,
+                    ease: 'none',
+                    duration: 50,
+                    repeat: -1,
+                })
+            }
         })
+     
       })
 
 
@@ -113,13 +142,30 @@ const Quienes = () =>{
             {/* </TitleHomeWraper> */}
                 
             <ParaghraphWraper ref={quienesRef}>
-                Goro Goro Immersive Lab es un <br />estudio boutique que está <br />idealmente ubicado en el corazón <br />de la Ciudad de México. <br />Somos un laboratorio formado por <br />ingenieros y artistas creativos <br />dedicados a experiencias <br />audiovisuales inmersivas que <br />utilizan tecnología de punta.<br />
+                Goro Goro Immersive Lab es un
+                <br />
+                estudio boutique que está
+                <br />
+                idealmente ubicado en el corazón
+                <br />
+                de la Ciudad de México.
+                <br />
+                Somos un laboratorio formado por
+                <br />
+                ingenieros y artistas creativos
+                <br />
+                dedicados a experiencias
+                <br />
+                audiovisuales inmersivas que
+                <br />
+                utilizan tecnología de punta.
+                <br />
             </ParaghraphWraper>
-            <GrupoServiciosWrapper ref={serviciosRef}>
-                <Servicios />
+            <GrupoServiciosWrapper className='serviciosContainer' ref={serviciosRef}>
+                <Servicios className='servicios' />
             </GrupoServiciosWrapper>
             <SecondGrupoServiciosWrapper ref={serviciosRefInverse}>
-                <Servicios />
+                <Servicios className='servicios' />
             </SecondGrupoServiciosWrapper>
         </QuienesWraper>
     )

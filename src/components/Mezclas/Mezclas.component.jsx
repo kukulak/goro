@@ -62,9 +62,9 @@ const Mezclas = () => {
         <MezclasWraper className='mezclas'>
             <Title title={'Mezclas'} />
 
-            <RecordWraper>
+            <RecordWraper className='recordsContainer'>
                 {mezclasApi.map((mezcla)=>
-                    <Record portada={mezcla.portada} key={mezcla.id} nombre={mezcla.nombre} artista={mezcla.artista} link={mezcla.link} plataforma={mezcla.plataforma} />
+                    <Record className='record' portada={mezcla.portada} key={mezcla.id} nombre={mezcla.nombre} artista={mezcla.artista} link={mezcla.link} plataforma={mezcla.plataforma} />
                     )}
             </RecordWraper>
 

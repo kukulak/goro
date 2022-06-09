@@ -24,6 +24,8 @@ import { shaderMaterial } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
 import "./Background.styles.css";
 import backbround from '../../icons/background2.jpg'
+
+
 const WaveShaderMaterial = shaderMaterial(
   // Uniform
   {
@@ -96,7 +98,7 @@ const Wave = () => {
 
   return (
     <mesh>
-      <planeBufferGeometry args={[1, 1, 16, 16]} />
+      <planeBufferGeometry args={[2, 2, 16, 16]} />
       {/* wireframe */}
       <waveShaderMaterial uColor={"hotpink"} ref={ref} />
       {/* <waveShaderMaterial uColor={"hotpink"} ref={ref} uTexture={image}  /> */}
@@ -106,7 +108,7 @@ const Wave = () => {
 
 const Scene = () => {
   return (
-    <div style={{ position: "fixed", width: "110%", height: "110%", zIndex: -1 }}>
+    <div style={{ position: "fixed", width: "100%", height: "100%", zIndex: -1 }}>
     <Canvas camera={{ fov: 5, position: [0, 0, 5] }}>
       <Suspense fallback={null}>
         <Wave />

@@ -11,6 +11,9 @@ import Contacto from './components/Contacto/Contacto.component';
 import Footer from './components/Footer/Footer.component'
 import Background from './components/Background/Background.component'
 import VideoHome from './components/VideoHome/VideoHome.component';
+import GaleriaEstudio from './components/GaleriaEstudio/GaleriaEstudio.component';
+import TextoEstudio from './components/GaleriaEstudio/TextoEstudio.component';
+import GaleriaCompleta from './components/GaleriaEstudio/GaleriaCompleta';
 function App() {
   return (
     <div className="App">
@@ -32,10 +35,13 @@ function App() {
     <VideoHome/>
     <Quienes />
     <Mezclas />
+    {/* <GaleriaEstudio /> */}
+    <GaleriaCompleta />
+    {/* <TextoEstudio /> */}
     {/* <Galeria/> */}
-    {/* <Testimoniales /> */}
-    {/* <GaleriaInstagram/> */}
-    {/* <Contacto/> */}
+    <Testimoniales />
+    <GaleriaInstagram/>
+    <Contacto/>
     {/* <SoundSystem /> */}
     <Footer/>
     <Background />

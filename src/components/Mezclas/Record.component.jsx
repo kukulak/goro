@@ -39,7 +39,7 @@ const Record = (props) => {
     const manageOver = () => {
         console.log('HOVER')
         ScrollTrigger.matchMedia({
-            "(min-width: 1280px)": function() {
+            "(min-width: 1300px)": function() {
                 gsap.to(mezclaRef.current,{
                     zIndex: 1000
                  })
@@ -62,7 +62,7 @@ const Record = (props) => {
                      rotation: -35,
                      scale: 0.6,
                      y: -10,
-                     x: 90,
+                     x: 72,
                      duration: 0.5
                  })
             }, 
@@ -88,8 +88,8 @@ const Record = (props) => {
                  gsap.to(discoRef.current,{
                      rotation: -35,
                      scale: 0.6,
-                     y: -10,
-                     x: 90,
+                     y: 1,
+                     x: 32,
                      duration: 0.5
                  })
             }
@@ -226,11 +226,11 @@ const Record = (props) => {
 
     return(
         <MezclaWraper className='fullDisc' ref={mezclaRef} onClick={() => manageClick(props.link)}>
-            <RecordImageWraper src={props.portada} ref={recordRef} />
+            <RecordImageWraper className='imgRecord' src={props.portada} ref={recordRef} />
 
-            <DiscWraper ref={discoRef} src={disco} />
+            <DiscWraper className='imgDisco' ref={discoRef} src={disco} />
 
-            <InfoRecordWraper ref={infoRef}>
+            <InfoRecordWraper className='infoContainer' ref={infoRef}>
                 <RecordNameWraper>
                     {props.nombre}
                 </RecordNameWraper>

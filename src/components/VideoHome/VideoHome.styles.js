@@ -8,14 +8,14 @@ export const SpaceCien = styled.div`
 export const VideoContainerWraper = styled.div`
     // margin-top: 100vh;
     display: block;
-    width: 100vw;
+    max-width: 100%;
     height: 100vh;
     // opacity: 0;
     background: black;
 `
 
 export const VideoWraper = styled.video`
-    width: 100%;
+    max-width: 100%;
     height: 100%;
 `
 

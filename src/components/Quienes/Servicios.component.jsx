@@ -60,7 +60,7 @@ const Servicios = () => {
 
         <ServiciosWrapper>
             {
-                listServicios.map((ls) => <TxtServiciosWrapper key={ls.id}>{ls.name}&ensp;-&ensp; </TxtServiciosWrapper>)
+                listServicios.map((ls) => <TxtServiciosWrapper className='eachService' key={ls.id}>{ls.name}&ensp;-&ensp; </TxtServiciosWrapper>)
             }
         </ServiciosWrapper>
        

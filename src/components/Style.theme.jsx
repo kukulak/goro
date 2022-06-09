@@ -21,5 +21,4 @@ export const themeGoroGoro = {
     },
   };
 
-
   // font-family: 'Kanit', sans-serif;
