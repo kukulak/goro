@@ -19,6 +19,9 @@ export const ContenedorFormularioWraper = styled.section`
     // grid-row: 1;
     grid-column: 1;
     z-index: 1;
+    @media (max-width: 1300px) {
+        width: 100%;
+      }
 `
 
 export const FormWraper = styled.form`
@@ -53,14 +56,26 @@ export const InputWraper = styled.input`
     border: none;
     border-radius: 5px;
     width: 100%;
+    padding: 0 0 0 10px;
+    font-family: ${() => themeGoroGoro.fonts.primary};
+    color: #876987;
+    font-size: 15px;
 `
 
 export const TextAreaWraper = styled.textarea`
-    width: 100%;
+    width: 95%;
     height: 374px;
     resize: vertical;
     border-radius: 5px;
     border: none;
+    padding: 10px 10px 0 10px;
+    font-family: ${() => themeGoroGoro.fonts.primary};
+    color: #876987;
+    font-size: 15px;
+    @media (max-width: 1300px) {
+        height: 300px;
+
+      }
 `
 
 export const InputSubmitWraper = styled.input`

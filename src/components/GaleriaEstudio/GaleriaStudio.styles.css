@@ -10,7 +10,7 @@
 }
 
 .infoEstudio{
-    margin: 250px 0 100px;
+    margin: 50px 0 100px;
     color: #d4d4d4;
     text-align: left;
     /* padding: 10% 20%; */
@@ -21,9 +21,26 @@
     justify-content: space-around;
 }
 
+@media only screen and (max-width: 1300px) {
+    .infoEstudio {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media only screen and (max-device-width: 1300px) {
+    .infoEstudio {
+      grid-template-columns: 1fr;
+    }
+  }
+
 .equipoContainer{
     background-color: #1a0019;
     padding: 10% 20%;
+}
+
+.arrowChain{
+    width: 9px;
+    padding: 0 5px;
 }
 
 p{
@@ -33,7 +50,9 @@ p{
 h1{
     font-size: 50px;
     margin: 30px 0 -20px 0;
-    color: #393939;
+    color: #878282;
+    font-family: 'kanit';
+
 }
 
 .infoP{

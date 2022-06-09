@@ -3,7 +3,7 @@ import { themeGoroGoro } from "../Style.theme";
 
 
 export const FullIntagramContainerWraper = styled.section`
-    width: 100vw;
+    // width: 100vw;
     overflow: hidden;
     margin: 200px 0;
     z-index: 2;
@@ -26,6 +26,10 @@ export const InstaImageWraper = styled.img`
     height: 530px;
     background-color: ${() => themeGoroGoro.colors.primary};
     object-fit: cover;
+    @media (max-width: 1300px) {
+        width: 420px;
+        height: 430px;
+      }
     
 `
 

@@ -1,5 +1,11 @@
 import React from 'react'
 import './GaleriaStudio.styles.css'
+import Arrow from '../../icons/icon_go.svg' 
+
+
+const ArrowImage = () => (
+    <img className='arrowChain' width='20' height='20' src={Arrow} alt='arrow'/>
+)
 
 function TextoEstudio() {
   return (
@@ -23,11 +29,10 @@ function TextoEstudio() {
                 Ableton Live 11,
             </p>
             <p className='infoP'>
-            Dolby Atmos Mastering Suite
+                Dolby Atmos Mastering Suite
             </p>
             <p className='infoP'>
-
-            and Dolby Audio Bridge.
+                and Dolby Audio Bridge.
             </p>
     </div>
     <div className='infoThree'>
@@ -45,12 +50,22 @@ function TextoEstudio() {
 
         <h1> Signal Chains:</h1>
         <p className='infoP'>
+            DAW <ArrowImage/> Dolby Audio Bridge <ArrowImage/> Dolby Atmos Mastering Suite <ArrowImage/> AVID HD Native interface <ArrowImage/> Focusrite RED 16Line <ArrowImage/> Genelec monitors & LFE (sub).
+        </p>
+
+        <p className='infoP'>
+            Audinate DANTE system <ArrowImage/> Cisco network switcher (PoE) <ArrowImage/> Focusrite AM2/X2P <ArrowImage/> headphones distribution (binaural & stereo)
+        </p>
+
+        {/* <p className='infoP'>
             DAW > Dolby Audio Bridge > Dolby Atmos Mastering Suite > AVID HD Native interface > Focusrite RED 16Line > Genelec monitors & LFE (sub).
         </p>
 
         <p className='infoP'>
             Audinate DANTE system > Cisco network switcher (PoE) > Focusrite AM2/X2P > headphones distribution (binaural & stereo)
-        </p>
+        </p> */}
+
+
     </div>
     </div>
     </div>

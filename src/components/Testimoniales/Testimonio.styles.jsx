@@ -10,6 +10,8 @@ export const AllCardsWraper = styled.section`
     // width: 65%;
     justify-items: center;
     gap: 123px;
+    flex-wrap: wrap;
+    justify-content: center;
 `
 
 export const TestimonialWrapper = styled.div`

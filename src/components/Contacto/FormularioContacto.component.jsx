@@ -46,12 +46,12 @@ const FormularioContacto = () => {
 
     return(
         <ContenedorFormularioWraper ref={ contactRef }className='contenedorForm'>
-                <TituloContacto>Mándanos un mensaje</TituloContacto>
-                <ParrafoContacto>
+                <TituloContacto className='tituloContacto'>Mándanos un mensaje</TituloContacto>
+                <ParrafoContacto className='parrafoContacto'>
                     o visítanos en Roma 8, Colonia Juarez, CDMX, México
 
                 </ParrafoContacto>
-        <FormWraper action="" method="post">
+        <FormWraper className='formWraper' action="" method="post">
            <FrameUnoWraper className='uno'>
                 <LabelWraper htmlFor="nombre">
                     Nombre
@@ -64,7 +64,7 @@ const FormularioContacto = () => {
                 <InputWraper type="email" name="email" id="email" />
             <RedesContactoWraper className="infoLinks">
             <ParrafoContacto className='pRedes'>
-                Búscanos en las redes sociales
+                Nuestras redes sociales
             </ParrafoContacto>
                 <AppleMusicBtn href='apple/gorogoro'/>
                 <Redes />
