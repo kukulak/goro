@@ -53,6 +53,7 @@ export const LogoWrapper = styled.img`
     grid-row: 1;
     justify-self: center;
     align-self: center;
+    overflow: hidden;
     @media (max-width: 1283px) {
       width: 500px;
     }

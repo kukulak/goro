@@ -29,7 +29,6 @@ window.onbeforeunload = function () {
   }
 
 const Home = () => {
-    
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     // const [coordenates, setCoordenates] = useState(0) 
     // const [sound, setSound] = useState({})
@@ -61,6 +60,29 @@ const Home = () => {
                     scrub: 2,
                     id: 'lo-BIg',
                     // invalidateOnRefresh: true,
+                    // onRefresh: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
+                }
+            })
+    
+        },
+        "(min-width: 320px)": function() {
+            gsap.to(
+                loGoroRef.current, {
+                // y: -150, 
+                scale: 3, 
+                // rotation: 50,
+                opacity: 0,
+                // opacity: 1,
+                scrollTrigger:{
+                    trigger: loGoroRef.current,
+                    pin: true,
+                    pinSpacing: false,
+                    start: '+=100 center',
+                    end: '320 top',
+                    markers: true,
+                    scrub: 2,
+                    id: 'lo-BIg',
+                    invalidateOnRefresh: true,
                     // onRefresh: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
                 }
             })
@@ -151,16 +173,18 @@ const Home = () => {
             <ThemeProvider theme={theme}>
                 <HomeWrapper css={(theme) => ({background: theme.colors.transparent})} className='homeContainer'>
                     {/* <Menu/> */}
-                    <LogoWrapper ref={loGoroRef} src={goroGoro} alt="GoroGoro" />
+                    <LogoWrapper className="logoWraper" ref={loGoroRef} src={goroGoro} alt="GoroGoro" />
                     <LogoEsquinaWrapper ref={loGoroEsquinaRef} src={goroGoro} alt="GoroGoro" />
                     <Redes/>
                     <AppleMusicBtn href='helloApple' />
+
                     {/* <PlayListWraper className='ApplePlayList'> 
                         <IconsWrapper css={css`
                         animation: ${LogoSpin} 10s linear infinite;
                         
                         `} src={appleMusic} alt="appleMusic link" />
                     </PlayListWraper> */}
+
                 </HomeWrapper>
             </ThemeProvider>
     )

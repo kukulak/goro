@@ -31,20 +31,35 @@ function App() {
           Learn React
         </a>
       </header> */}
+    
+    {/* ok */}
     <Home />
-    <VideoHome/>
+    {/* <VideoHome/> */}
     <Quienes />
-    <Mezclas />
+    {/* <Mezclas /> */}
+    
+
     {/* <GaleriaEstudio /> */}
-    <GaleriaCompleta />
+    
+    {/* ok */}
+    {/* <GaleriaCompleta /> */}
+    
+      
     {/* <TextoEstudio /> */}
     {/* <Galeria/> */}
-    <Testimoniales />
-    <GaleriaInstagram/>
-    <Contacto/>
+    
+    {/* ok */}
+    {/* <Testimoniales /> */}
+    {/* <GaleriaInstagram/> */}
+    {/* <Contacto/> */}
+
+
     {/* <SoundSystem /> */}
-    <Footer/>
-    <Background />
+    
+    {/* ok */}
+
+    {/* <Footer/> */}
+    {/* <Background /> */}
 
     </div>
   );

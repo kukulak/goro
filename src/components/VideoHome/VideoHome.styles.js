@@ -3,6 +3,9 @@ import { themeGoroGoro } from '../Style.theme'
 
 export const SpaceCien = styled.div`
     padding-top: 100vh;
+    @media (max-width: 768px) {
+       padding-top: 50vh;
+    }
 `
 
 export const VideoContainerWraper = styled.div`
