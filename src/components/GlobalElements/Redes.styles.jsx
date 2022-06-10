@@ -70,8 +70,8 @@ export const RedesWraper = styled.div`
     justify-self: start;
     align-self: end;
     padding: 30px
-    position: fixed;
-    bottom: 1%;
+    ${'' /* position: fixed; */}
+    ${'' /* bottom: 1%; */}
     @media (max-width: 420px) {
       padding: 0px;
     }

@@ -47,8 +47,8 @@ export const AppleMusicWraper = styled.button`
     user-select: all;
     pointer-events: all;
     cursor: pointer;
-    position: fixed;
-    bottom: 1%;
+    ${'' /* position: fixed; */}
+    ${'' /* bottom: 1%; */}
     @media (max-width: 768px) {
       padding: 0;
     }

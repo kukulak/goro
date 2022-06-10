@@ -34,9 +34,9 @@ function App() {
     
     {/* ok */}
     <Home />
-    {/* <VideoHome/> */}
+    <VideoHome/>
     <Quienes />
-    {/* <Mezclas /> */}
+    <Mezclas />
     
 
     {/* <GaleriaEstudio /> */}
@@ -58,8 +58,8 @@ function App() {
     
     {/* ok */}
 
-    {/* <Footer/> */}
-    {/* <Background /> */}
+    <Footer/>
+    <Background />
 
     </div>
   );

@@ -77,7 +77,18 @@ const Quienes = () =>{
                     duration: 50,
                     repeat: -1,
                 })
+            },
+            "(min-width: 400px)": function() {
+                horizontal.to(
+                    serviciosRef.current, {
+                    x: '-=450',
+                    yoyo: true,
+                    ease: 'none',
+                    duration: 50,
+                    repeat: -1,
+                })
             }
+
         })
       })
 
@@ -142,29 +153,15 @@ const Quienes = () =>{
             {/* </TitleHomeWraper> */}
                 
             <ParaghraphWraper ref={quienesRef}>
-                Goro Goro Immersive Lab es un
+                Goro Goro Immersive Lab es un estudio boutique que está idealmente ubicado en el corazón de la Ciudad de México. 
                 <br />
-                estudio boutique que está
-                <br />
-                idealmente ubicado en el corazón
-                <br />
-                de la Ciudad de México.
-                <br />
-                Somos un laboratorio formado por
-                <br />
-                ingenieros y artistas creativos
-                <br />
-                dedicados a experiencias
-                <br />
-                audiovisuales inmersivas que
-                <br />
-                utilizan tecnología de punta.
-                <br />
+                Somos un laboratorio formado por ingenieros y artistas creativos dedicados a experiencias audiovisuales inmersivas que utilizan tecnología de punta.
             </ParaghraphWraper>
             <GrupoServiciosWrapper className='serviciosContainer' ref={serviciosRef}>
                 <Servicios className='servicios' />
             </GrupoServiciosWrapper>
-            <SecondGrupoServiciosWrapper ref={serviciosRefInverse}>
+
+            <SecondGrupoServiciosWrapper className='serviciosContainerInvert' ref={serviciosRefInverse}>
                 <Servicios className='servicios' />
             </SecondGrupoServiciosWrapper>
         </QuienesWraper>

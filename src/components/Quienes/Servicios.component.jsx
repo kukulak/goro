@@ -21,7 +21,7 @@ const listServicios = [
         id: 'ls4'
     },
     {
-        name: 'Mix Sonido inmersivo Live',
+        name: 'Mix Sonido Inmersivo Live',
         id: 'ls5'
     },
     {
@@ -60,7 +60,7 @@ const Servicios = () => {
 
         <ServiciosWrapper>
             {
-                listServicios.map((ls) => <TxtServiciosWrapper className='eachService' key={ls.id}>{ls.name}&ensp;-&ensp; </TxtServiciosWrapper>)
+                listServicios.map((ls) => <TxtServiciosWrapper className='eachService' key={ls.id}>{ls.name} </TxtServiciosWrapper>)
             }
         </ServiciosWrapper>
        
