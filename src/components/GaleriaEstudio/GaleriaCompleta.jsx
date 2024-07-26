@@ -6,9 +6,9 @@ import TextoEstudio from './TextoEstudio.component'
 function GaleriaCompleta() {
   return (
     <div>
-        <GaleriaEstudio />
-        <ImagesGaleria />
-        <TextoEstudio />
+      <GaleriaEstudio />
+      <ImagesGaleria />
+      <TextoEstudio />
     </div>
   )
 }

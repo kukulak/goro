@@ -1,13 +1,115 @@
-.AppleMusic{
-    background-image: url(../../icons/logo_appleMusic.svg);
-    background-repeat: no-repeat;
-    background-position-y: 50%;
+/* import spotify from '../../icons/logo_spotify.svg'
+import lossless from '../../icons/logo_lossless.svg'
+import tidal from '../../icons/logo_tidal.svg'
+import amazon from '../../icons/logo_amazon.svg' */
+
+.logoMezclas {
+  /* height: 102px; */
+
+  background-size: 100%;
+  width: 100px;
+  height: 41px;
+
+  grid-template-areas: unset;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  row-gap: 5px;
+  column-gap: 15px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: visible;
 }
 
-.YouTube{
-    background-image: url(../../icons/icon_youTube.svg);
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-    background-size: 50%;
-    background-position-x: right;
+.AppleMusic {
+  background-image: url(../../icons/logo_appleMusic.svg);
+  background-repeat: no-repeat;
+  /* background-position-y: 50%; */
+  width: 160px;
+  height: 37px;
+  margin: 10px 0 8px 0;
+}
+
+.YouTube {
+  background-image: url(../../icons/icon_youTube.svg);
+  background-repeat: no-repeat;
+  /* background-position-y: 50%; */
+  /* background-position-x: left; */
+  height: 42px;
+  width: 80px;
+  margin: 10px 0;
+}
+
+.Spotify {
+  background-image: url(../../icons/logo_spotify.png);
+  background-repeat: no-repeat;
+  /* background-position-y: 50%; */
+  background-size: contain;
+  height: 42px;
+  width: 110px;
+  margin: 10px 0;
+}
+
+.spotify {
+  background-image: url(../../icons/logo_spotify.png);
+  background-repeat: no-repeat;
+  /* background-position-y: 50%; */
+}
+
+.apple {
+  background-image: url(../../icons/logo_appleMusic.svg);
+  background-repeat: no-repeat;
+  /* background-position-y: 50%; */
+}
+
+.lossless {
+  background-image: url(../../icons/logo_lossless.png);
+  background-repeat: no-repeat;
+  /* background-position-y: 50%; */
+}
+
+.tidal {
+  background-image: url(../../icons/logo_tidal.png);
+  background-repeat: no-repeat;
+  /* background-position-y: 50%; */
+  /* background-size: 80%; */
+  background-position-y: center;
+}
+
+.amazon {
+  background-image: url(../../icons/logo_amazon.png);
+  background-repeat: no-repeat;
+  /* background-position-y: 50%; */
+}
+
+.dear {
+  background-image: url(../../icons/logo_dear.png);
+  background-repeat: no-repeat;
+  background-position-y: 0% !important;
+  background-size: 100% !important;
+  /* background-size: 25% !important; */
+  height: 60px !important;
+}
+
+.dolby {
+  background-image: url(../../icons/logo_dolby.png);
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-y: 14% !important;
+  background-size: 130px !important;
+  width: 140px;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
 }

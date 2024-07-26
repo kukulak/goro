@@ -39,7 +39,7 @@ const Testimoniales = () => {
     return(
         <TestimonialWrapper className='testimoniales'>
             <Title title={'Testimoniales'} />
-            <AllCardsWraper>
+            <AllCardsWraper className='groupCards'>
             {testimonios.map(test => 
                 <Testimonio key={test.id} texto={test.texto} img={test.foto} />
                 )}

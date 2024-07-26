@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -43,7 +44,6 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #6969dd #e0e0e0;
 } */
-
 
 .App-header {
   background-color: #121419;

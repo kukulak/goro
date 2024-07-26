@@ -6,11 +6,15 @@ import {
     ContenedorContactoWraper
     } from './Contacto.styles'
 
+import Formulario from './FormularioClass'
+
 const Contacto = () => {
     return(
         <ContenedorContactoWraper className='contenedorContacto'>
+
             <Title title={'Contacto'} />
-            <FormularioContacto />
+            <Formulario />
+            {/* <FormularioContacto /> */}
         </ContenedorContactoWraper>
     )
 }

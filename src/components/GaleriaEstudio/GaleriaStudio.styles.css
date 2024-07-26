@@ -1,60 +1,96 @@
-.dolbyMarcara{
-    mask-image: url('../../icons/texto-studio.svg');
-    mask-size: 25%;
-    mask-position: center;
-    mask-repeat: no-repeat;
+.dolbyMarcara {
+  /* mask-image: url('../../icons/texto-studio.svg'); */
+  mask-image: url('../../icons/GOROGOROIL.svg');
+  mask-size: 40%;
+  /* mask-position: center; */
+  mask-position: 53% center;
+  mask-repeat: no-repeat;
 }
 
-.theH{
-    /* height: 100vh; */
-}
-
-.infoEstudio{
-    margin: 50px 0 100px;
-    color: #d4d4d4;
-    text-align: left;
-    /* padding: 10% 20%; */
-    font-family: 'kanit';
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-@media only screen and (max-width: 1300px) {
-    .infoEstudio {
-      grid-template-columns: 1fr;
-    }
+@media (max-width: 600px) {
+  .dolbyMarcara {
+    mask-size: 80%;
+    margin-top: 120px;
   }
+}
 
-  @media only screen and (max-device-width: 1300px) {
-    .infoEstudio {
-      grid-template-columns: 1fr;
-    }
+@media (max-width: 900px) {
+  .dolbyMarcara {
+    mask-size: 80%;
+    margin-top: 0px;
   }
+}
 
-.equipoContainer{
+.theH {
+  /* height: 100vh; */
+}
+
+.infoEstudio {
+  margin: 50px 0 100px;
+  color: #d4d4d4;
+  text-align: left;
+  /* padding: 10% 20%; */
+  font-family: 'kanit';
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1400px) {
+  .infoEstudio {
+    grid-template-columns: 1fr;
+    column-gap: 40px;
+  }
+}
+
+@media only screen and (max-device-width: 1400px) {
+  .infoEstudio {
+    grid-template-columns: 1fr;
+    column-gap: 40px;
+  }
+}
+
+.equipoContainer {
+  background-color: #1a0019;
+  padding: 10% 10%;
+}
+
+@media only screen and (max-device-width: 1400px) {
+  .equipoContainer {
     background-color: #1a0019;
-    padding: 10% 20%;
+    padding: 10% 10%;
+  }
 }
 
-.arrowChain{
-    width: 9px;
-    padding: 0 5px;
+.arrowChain {
+  /* width: 9px;
+  padding: 0 5px; */
+  width: 28px;
+  padding: 3px 10px 3px;
 }
 
-p{
-    font-size: larger;
+p {
+  font-size: larger;
 }
 
-h1{
-    font-size: 50px;
-    margin: 30px 0 -20px 0;
-    color: #878282;
-    font-family: 'kanit';
-
+h1 {
+  font-size: 50px;
+  margin: 30px 0 -10px 0;
+  color: #878282;
+  font-family: 'kanit';
 }
 
-.infoP{
-    margin: 13px 0 0 40px;
+.infoP {
+  margin: 13px 0 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 1.7;
+}
+
+@media only screen and (max-device-width: 1400px) {
+  .infoP {
+    margin: 13px 0 0 0px;
+  }
 }

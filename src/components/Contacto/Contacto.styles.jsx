@@ -19,17 +19,17 @@ export const ContenedorFormularioWraper = styled.section`
     // grid-row: 1;
     grid-column: 1;
     z-index: 1;
-    @media (max-width: 1300px) {
-        width: 100%;
+    @media (max-width: 1400px) {
+        width: 85%;
       }
 `
 
 export const FormWraper = styled.form`
     display: grid; 
     grid-template-columns: 1fr 1fr;
-    // justify-content: center;
-    // justify-items: center;
-    // align-items: center;
+    @media (max-width: 414px) {
+        grid-template-columns: 1fr;
+      }
 `
 
 export const FrameUnoWraper = styled.div`
@@ -57,6 +57,7 @@ export const InputWraper = styled.input`
     border-radius: 5px;
     width: 100%;
     padding: 0 0 0 10px;
+    
     font-family: ${() => themeGoroGoro.fonts.primary};
     color: #876987;
     font-size: 15px;
@@ -72,7 +73,7 @@ export const TextAreaWraper = styled.textarea`
     font-family: ${() => themeGoroGoro.fonts.primary};
     color: #876987;
     font-size: 15px;
-    @media (max-width: 1300px) {
+    @media (max-width: 1400px) {
         height: 300px;
 
       }
@@ -84,6 +85,8 @@ export const InputSubmitWraper = styled.input`
     margin: 10px 0;
     border: none;
     padding: 10px 30px;
+    pointer-events: all;
+    cursor: pointer;
     background: ${() => themeGoroGoro.colors.color};
     color: ${() => themeGoroGoro.colors.tertiary};
     font-weight: 200;
@@ -109,7 +112,9 @@ export const TituloContacto = styled.h3`
 
 export const RedesContactoWraper = styled.div`
     display: grid;
+    gap: 14px;
     grid-template-rows: 0.2fr 0.2fr 0.3fr;
     justify-content: start;
     
 `
+

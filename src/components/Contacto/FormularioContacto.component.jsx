@@ -1,4 +1,6 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useRef, useEffect, useState} from 'react'
+import axios from 'axios';
+
 import {
         ContenedorFormularioWraper,
         FormWraper,
@@ -27,6 +29,50 @@ import Contacto from './Contacto.component';
 
 const FormularioContacto = () => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+    const [nombre, setNombre] = useState('')
+    const [email, setEmail] = useState('')
+    const [mensaje, setMensaje] = useState('')
+    const [mailSent, setMailSent] = useState(false)
+    const [error, setError] = useState(null)
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios({
+          method: "post", 
+          url:"http://gorogoro.com/mail.php", 
+          data:  this.state
+        })
+        .then((response)=>{
+            this.setState({
+                mailSent: response.data.sent
+            }, () => console.log(this.state)) // NB! setState accepts callbacks
+                  
+            
+          if (response.data.status === 'success') {
+            alert(this.state.nombre + " tu mensaje fue enviado."); 
+            this.resetForm()
+          } else if (response.data.status === 'fail') {
+            alert(this.state.nombre + " el mensaje no se envio")
+          }
+        })
+        .catch(error => this.setState({ error: error.message }));
+
+        // .then(result => {
+        //     this.setState({
+        //       mailSent: result.data.sent
+        //     }, () => console.log(this.state)) // NB! setState accepts callbacks
+        //   })
+        //   .catch(error => this.setState({ error: error.message }));
+
+
+      }
+    
+      const resetForm = () => {
+        this.setState({nombre: '', email: '', pais: '', cp: '', mensaje: ''})
+      }
+
 
     const contactRef = useRef()
     useEffect(()=> {

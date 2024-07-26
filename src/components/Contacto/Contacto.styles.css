@@ -26,3 +26,44 @@
     align-self: end;
     margin: 10px 0;
 } 
+
+.agradecimiento{
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+}
+
+.agradecimiento div{
+    align-self: center;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .redesContactosMobile{
+        display: block;
+    }
+
+    .redesContactosDesk{
+        display: none;
+    }
+    .redesContactosMobile .appleMobile{
+     margin-bottom: 50px;
+    }
+    
+    .infoLinks{
+        justify-content: center;
+        justify-items: center;
+        margin-bottom: 50px;
+    }
+  }
+
+
+.redesContactosDesk{
+    display: block;
+}
+
+.redesContactosMobile{
+    display: none;
+}
+
+

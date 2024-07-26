@@ -52,9 +52,10 @@ export const LogoWrapper = styled.img`
 
 export const IconsRedesWrapper = styled.img`
     width: auto;
-    height: 40px;
+    height: 25px;
     // grid-column: 1;
     grid-row: 1;
+    margin-bottom: 14px;
     @media (max-width: 420px) {
       height: 30px;
     }
@@ -90,6 +91,7 @@ export const RedBtnWraper = styled.button`
     border: none;
     cursor: pointer;
     margin: 20px;
+    pointer-events: all;
     @media (max-width: 420px) {
       margin: 10px;
     }

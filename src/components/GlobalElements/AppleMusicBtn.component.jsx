@@ -1,27 +1,20 @@
 import React from 'react'
 
-import { 
-        LogoWrapper,
-        AppleMusicWraper,
-        } from "./AppleMusicBtn.styles.jsx";
+import { LogoWrapper, AppleMusicWraper } from './AppleMusicBtn.styles.jsx'
 
+const AppleMusicBtn = props => {
+  // const manageClick = () => {
+  //   console.log('applepressed', props.href)
+  // }
 
-import appleMusic from '../../icons/logo_appleMusic.svg'
-
-const AppleMusicBtn = (props) => {
-
-    const manageClick = () => {
-        console.log('applepressed', props.href)
-    }
-
-    return(
-        // <button onClick={manegeClick}>
-        //     <img src="" alt="" />
-        // </button>
-        <AppleMusicWraper onClick={manageClick} className='appleMusic'>
-            <LogoWrapper src={appleMusic} alt="appleMusic link" />
-        </AppleMusicWraper>
-    )
+  return (
+    // <button onClick={manegeClick}>
+    //     <img src="" alt="" />
+    // </button>
+    <AppleMusicWraper target="_blank" href={props.href} className="appleMusic">
+      <LogoWrapper src={props.image} alt="appleMusic link" />
+    </AppleMusicWraper>
+  )
 }
 
 export default AppleMusicBtn

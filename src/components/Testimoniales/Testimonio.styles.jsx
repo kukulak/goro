@@ -6,8 +6,8 @@ export const AllCardsWraper = styled.section`
     display: flex;
     // grid-row: 1;
     grid-column: 1;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    // width: 65%;
+    ${'' /* grid-template-columns: 1fr 1fr 1fr 1fr; */}
+    width: 65%;
     justify-items: center;
     gap: 123px;
     flex-wrap: wrap;
@@ -22,7 +22,7 @@ export const TestimonialWrapper = styled.div`
     // grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr;
     justify-items: center;
     // overflow: hidden;
-    height: 100vh;
+    ${'' /* height: 100vh; */}
     // gap: 150px;
 `
 
