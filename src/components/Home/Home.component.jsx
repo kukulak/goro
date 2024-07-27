@@ -1,8 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { css, ThemeProvider } from '@emotion/react'
-import React, { useEffect, useState, useRef } from 'react'
-
-import Menu from './Menu.component'
+import { ThemeProvider } from '@emotion/react'
+import React, { useEffect, useRef } from 'react'
 
 import AppleMusicBtn from '../GlobalElements/AppleMusicBtn.component'
 import Redes from '../GlobalElements/Redes.component'
@@ -10,14 +8,11 @@ import Redes from '../GlobalElements/Redes.component'
 import dolby from '../../icons/2020_dolbyatmos_horiz_white-200.png'
 // import appleMusic from '../../icons/logo_appleMusic.svg'
 import goroGoro from '../../icons/logo_goroGoro.svg'
-import faceBook from '../../icons/icon_faceBook.svg'
-import youTube from '../../icons/icon_youTube.svg'
-import instagram from '../../icons/icon_instagram.svg'
+
 import appleMusic from '../../icons/logo_appleMusic.svg'
 import {
   HomeWrapper,
   LogoBackWrapper,
-  LogoWrapper,
   LogoEsquinaWrapper,
   theme
 } from './Home.styles.jsx'

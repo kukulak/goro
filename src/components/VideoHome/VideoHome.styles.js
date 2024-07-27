@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { themeGoroGoro } from '../Style.theme'
+// import { themeGoroGoro } from '../Style.theme'
 
 export const SpaceCien = styled.div`
   padding-top: 100vh;
@@ -30,13 +30,6 @@ export const VideoWraper = styled.video`
   -webkit-filter: opacity(20%);
   ${'' /* pointer-events: none; */}
 `
-
-// Mix Dolby Atmos,
-// Mix Ambisonics,
-// Mix tradicional,
-// PreMix postproducción (5.1, 7.1 & Dolby Atmos)
-// MIx Sonido inmersivo Live,
-// Producciones audio visuales en formatos inmersivos
 
 export const LogoWrapper = styled.img`
   min-width: 200px;

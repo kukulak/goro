@@ -15,23 +15,20 @@
 //   )
 // }
 
-
-
-import * as THREE from "three";
-import React, { useRef, Suspense } from "react";
-import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
-import { shaderMaterial } from "@react-three/drei";
-import glsl from "babel-plugin-glsl/macro";
-import "./Background.styles.css";
-import backbround from '../../icons/background2.jpg'
-
+import * as THREE from 'three'
+import React, { useRef, Suspense } from 'react'
+import { Canvas, extend, useFrame } from '@react-three/fiber'
+import { shaderMaterial } from '@react-three/drei'
+import glsl from 'babel-plugin-glsl/macro'
+import './Background.styles.css'
+// import backbround from '../../icons/background2.jpg'
 
 const WaveShaderMaterial = shaderMaterial(
   // Uniform
   {
     uTime: 0,
     uColor: new THREE.Color(0.0, 0.0, 0.0),
-    colorStart: new THREE.Color(0.15, 0.0, 0.15 ),
+    colorStart: new THREE.Color(0.15, 0.0, 0.15),
     colorEnd: new THREE.Color(0.78, 0.44, 0.83),
     uTexture: new THREE.Texture()
   },
@@ -83,48 +80,49 @@ const WaveShaderMaterial = shaderMaterial(
 
     }
   `
-);
+)
 
-extend({ WaveShaderMaterial });
+extend({ WaveShaderMaterial })
 
 const Wave = () => {
-  const ref = useRef();
-  useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
+  const ref = useRef()
+  useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()))
 
-  const [image] = useLoader(THREE.TextureLoader, [
-    backbround
-    // "https://images.unsplash.com/photo-1604011092346-0b4346ed714e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
-  ]);
+  // const [image] = useLoader(THREE.TextureLoader, [
+  //   backbround
+  //   // "https://images.unsplash.com/photo-1604011092346-0b4346ed714e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+  // ]);
 
   return (
     <mesh>
       <planeBufferGeometry args={[2, 2, 16, 16]} />
       {/* wireframe */}
-      <waveShaderMaterial uColor={"hotpink"} ref={ref} />
+      <waveShaderMaterial uColor={'hotpink'} ref={ref} />
       {/* <waveShaderMaterial uColor={"hotpink"} ref={ref} uTexture={image}  /> */}
     </mesh>
-  );
-};
+  )
+}
 
 const Scene = () => {
   return (
-    <div style={{ position: "fixed", width: "100%", height: "100%", zIndex: -1 }}>
-    <Canvas camera={{ fov: 5, position: [0, 0, 5] }}>
-      <Suspense fallback={null}>
-        <Wave />
-      </Suspense>
-    </Canvas>
+    <div
+      style={{ position: 'fixed', width: '100%', height: '100%', zIndex: -1 }}
+    >
+      <Canvas camera={{ fov: 5, position: [0, 0, 5] }}>
+        <Suspense fallback={null}>
+          <Wave />
+        </Suspense>
+      </Canvas>
     </div>
-  );
-};
+  )
+}
 
 const App = () => {
   return (
     <>
       <Scene />
     </>
-  );
-};
+  )
+}
 
-export default App;
-
+export default App

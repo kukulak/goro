@@ -55,7 +55,7 @@ console.log(listServicios.slice(0, 5))
 
 const Servicios = ({ forMobile }) => {
   return (
-    <ServiciosWrapper className="serviciosall">
+    <ServiciosWrapper className="serviciosall ">
       {forMobile
         ? listServicios.slice(0, 6).map(mls => (
             <TxtServiciosWrapper className="eachService" key={mls.id}>

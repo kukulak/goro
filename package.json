@@ -19,14 +19,14 @@
     "react-dom": "^17.0.2",
     "react-modal": "^3.16.1",
     "react-player": "^2.12.0",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "svgo": "^2.8.0",
     "three": "^0.138.3",
     "tone": "^14.7.77",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

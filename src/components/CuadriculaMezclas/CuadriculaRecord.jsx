@@ -1,25 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 
-import disco from '../../icons/disco.png'
-import portada from '../../img-momentos/goro-0002.png'
-
-// import {
-//   ListenWraper,
-//   MezclasWraper,
-//   OneRpmWraper,
-//   SingleWraper,
-//   MezclaWraper,
-//   RecordImageWraper,
-//   DiscWraper,
-//   LinkAppleWraper,
-//   LogosWraper,
-//   TitleWraper,
-//   RecordNameWraper,
-//   ParaghraphWraper,
-//   ProduccionWraper,
-//   InfoRecordWraper,
-//   ContenedorLogos
-// } from './Mezclas.styles'
+// import disco from '../../icons/disco.png'
+// import portada from '../../img-momentos/goro-0002.png'
 
 // GSAP
 import { gsap } from 'gsap'
@@ -29,17 +11,17 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 const Record = props => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
-  const manageClick = open => {
-    window.open(open, '_blank')
-    console.log('clicked')
-  }
+  // const manageClick = open => {
+  //   window.open(open, '_blank')
+  //   console.log('clicked')
+  // }
 
   const [blurunblur, setBlurunblur] = useState()
 
   const recordRef = useRef()
   const mezclaRef = useRef()
-  const infoRef = useRef()
-  const discoRef = useRef()
+  // const infoRef = useRef()
+  // const discoRef = useRef()
 
   const portadaBlur = {
     // transition: 'all 2s ease-in',

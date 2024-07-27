@@ -1,20 +1,20 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef } from 'react'
 
 import { GaleriaWraper, ImageWraper } from './GaleriaEstudio.styles'
 
 import './GaleriaStudio.styles.css'
 
-import img001 from '../../img-momentos/goro_web2.jpeg'
+// import img001 from '../../img-momentos/goro_web2.jpeg'
 import img002 from '../../img-momentos/goro_web3.jpeg'
 import img003 from '../../img-momentos/goro_web4.jpeg'
-import img004 from '../../img-momentos/goro-0004.png'
-import img005 from '../../img-momentos/goro-0005.png'
-import img006 from '../../img-momentos/goro-0006.png'
+// import img004 from '../../img-momentos/goro-0004.png'
+// import img005 from '../../img-momentos/goro-0005.png'
+// import img006 from '../../img-momentos/goro-0006.png'
 import img007 from '../../img-momentos/920E86AE-771E-450E-BCB1-0740C492E3BD.jpg'
 
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
+// import { gsap } from 'gsap'
+// import { ScrollTrigger } from 'gsap/ScrollTrigger'
+// import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 // import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 const galeriaGoro = [
@@ -61,7 +61,7 @@ const galeriaGoro = [
 
 const ImagesGaleria = () => {
   const imgRef = useRef()
-  const mascaraRef = useRef(true)
+  // const mascaraRef = useRef(true)
   return (
     <div>
       <GaleriaWraper className="dolbyMarcaras" ref={imgRef}>

@@ -31,7 +31,7 @@ export const TitleWraper = styled.h1`
 export const ParaghraphWraper = styled.p`
   color: ${() => themeGoroGoro.colors.primary};
   font-family: ${() => themeGoroGoro.fonts.primary};
-  font-size: 35px;
+  font-size: 50px;
   font-weight: 200;
   line-height: 1.3;
   text-align: left;
@@ -66,7 +66,7 @@ export const ParaghraphWraper = styled.p`
 export const ServiciosWrapper = styled.div`
   display: flex;
   grid-column: 1;
-  margin: 0 0 0px 0;
+  ${'' /* margin: 0 0 0px 0; */}
   padding: 0;
 
   @media (max-width: 820px) {
@@ -83,6 +83,7 @@ export const ServiciosWrapper = styled.div`
 
 export const GrupoServiciosWrapper = styled.div`
   margin: 0;
+  margin-top: 130px;
   margin-left: 6220px;
 
   grid-column: 1;

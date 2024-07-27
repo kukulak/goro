@@ -53,7 +53,7 @@ function App() {
       <MobileView>
         <GaleriaInstagramMobile />
       </MobileView>
-
+      <div className="mt-96 "></div>
       <Footer />
       <Background />
     </div>

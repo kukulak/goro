@@ -1,19 +1,12 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect } from 'react'
 import {
   QuienesWraper,
-  TitleWraper,
   ParaghraphWraper,
   GrupoServiciosWrapper,
-  SecondGrupoServiciosWrapper,
-  TitleHomeWraper
+  SecondGrupoServiciosWrapper
 } from './Quienes.styles'
 
-import {
-  BrowserView,
-  MobileView,
-  isBrowser,
-  isMobile
-} from 'react-device-detect'
+import { isBrowser, isMobile } from 'react-device-detect'
 
 // GSAP
 
@@ -32,45 +25,6 @@ const Quienes = props => {
   const serviciosRef = useRef()
   const serviciosRefInverse = useRef()
   const quienesRef = useRef()
-
-  // useEffect(() => {
-  //   let horizontal = gsap.timeline()
-  //   ScrollTrigger.matchMedia({
-  //     '(min-width: 1400px)': function () {
-  //       horizontal.to(serviciosRef.current, {
-  //         x: gsap.utils.unitize(x => parseFloat(x) % 500),
-  //         // x: '-=6350',
-  //         // yoyo: true,
-  //         ease: 'none',
-  //         duration: 50,
-  //         repeat: -1
-  //       })
-  //     },
-  //     '(min-width: 769px)': function () {
-  //       horizontal.to(serviciosRef.current, {
-  //         x: '-=5450',
-  //         modifiers: {
-  //           x: gsap.utils.unitize(x => parseFloat(x) % 5450)
-  //         },
-  //         // yoyo: true,
-  //         ease: 'none',
-  //         duration: 50,
-  //         repeat: -1
-  //       })
-  //     },
-  //     '(min-width: 500px)': function () {
-  //       horizontal.to(serviciosRef.current, {
-  //         // x: '-=450',
-  //         x: gsap.utils.unitize(x => parseFloat(x) % 500),
-
-  //         yoyo: true,
-  //         ease: 'none',
-  //         duration: 50,
-  //         repeat: -1
-  //       })
-  //     }
-  //   })
-  // })
 
   useEffect(() => {
     gsap.to(serviciosRef.current, {
@@ -148,7 +102,7 @@ const Quienes = props => {
       {isBrowser ? (
         <>
           <GrupoServiciosWrapper
-            className="serviciosContainer"
+            className="serviciosContainer "
             ref={serviciosRef}
           >
             <Servicios className="servicios" />

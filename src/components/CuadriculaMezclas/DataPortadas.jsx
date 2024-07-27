@@ -54,7 +54,118 @@ import fruslerias from '../../discos/febrero2024/fruslerias.jpeg'
 import masAlto from '../../discos/febrero2024/masAlto.jpeg'
 import yNegro from '../../discos/febrero2024/yNegro.jpeg'
 
+import chNodal from '../../discos/julio2024/CHRISTIAN_NODAL_KBRON_MEDIO.png'
+import luaLacruz from '../../discos/julio2024/LUA_LACRUZ_EN_CUALQUIER_MOMENTO.png'
+import remikDemonios from '../../discos/julio2024/REMIK_ALBUM_MIS_DEMONIOS.png'
+import romiGenero from '../../discos/julio2024/ROMI_AXHE_SAFREE_GENERO_REMIX.png'
+import snowApple from '../../discos/julio2024/SNOW_APPLE_LA_CUMBIA_DE_LAS_LOCAS.png'
+import sofiMata from '../../discos/julio2024/SOFI_MATA_SI_ME_DICES_QUE_SI.png'
+import zemmoaMio from '../../discos/julio2024/ZEMMOA_MIO_GLADIATORE.png'
+import zemmoaQueriendonos from '../../discos/julio2024/ZEMMOA_QUERIENDONOS_BIEN.png'
+import zemmoaCancion from '../../discos/julio2024/ZEMMOA-MI_FAVORITA_CANCION.png'
+
 export const DataPortadas = [
+  {
+    single: 'Género (Remix)',
+    nombre: '',
+    artista: 'ROMI MARCOS - AXHE - SAFREE',
+    link: 'https://music.apple.com/mx/album/g%C3%A9nero-remix/1732153492?i=1732153497&l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'OneRpm',
+    id: 'record0058',
+    portada: romiGenero
+  },
+
+  {
+    single: 'La cumbia de las locas',
+    nombre: '',
+    artista: 'Snow Apple',
+    link: 'https://music.apple.com/mx/album/cumbia-de-las-locas/1738962166?i=1738962289&l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'Snowapple BV',
+    id: 'record0057',
+    portada: snowApple
+  },
+  {
+    single: 'Si me dices que sí',
+    nombre: '',
+    artista: 'Sofi Mata',
+    link: 'https://music.apple.com/mx/album/si-me-dices-que-s%C3%AD/1735852428?i=1735852429&l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'UMG',
+    id: 'record0056',
+    portada: sofiMata
+  },
+
+  {
+    single: 'Kbron y Medio',
+    nombre: '',
+    artista: 'Lua Lacruz',
+    link: 'https://music.apple.com/mx/album/kbron-y-medio/1746543040?i=1746543043&l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'Sony Music Entertainment México',
+    id: 'record0055',
+    portada: chNodal
+  },
+  {
+    single: 'En cualquier momento',
+    nombre: '',
+    artista: 'Lua Lacruz',
+    link: 'https://music.apple.com/mx/album/en-cualquier-momento/1733898132?i=1733898382&l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'UMG',
+    id: 'record0054',
+    portada: luaLacruz
+  },
+  {
+    single: 'Mis demonios',
+    nombre: '',
+    artista: 'Remik Gonzalez',
+    link: 'https://music.apple.com/mx/album/mis-demonios/1749121488?l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'OpenRpm',
+    id: 'record0053',
+    portada: remikDemonios
+  },
+  {
+    single: 'Mi favorita canción',
+    nombre: '',
+    artista: 'Zemmoa',
+    link: 'https://music.apple.com/mx/album/mi-favorita-canci%C3%B3n-single/1755429427?l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'UMG',
+    id: 'record0052',
+    portada: zemmoaCancion
+  },
+  {
+    single: 'Queriéndonos bien',
+    nombre: '',
+    artista: 'Zemmoa',
+    link: 'https://music.apple.com/mx/album/queri%C3%A9ndonos-bien/1740423962?i=1740424222&l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'UMG',
+    id: 'record0051',
+    portada: zemmoaQueriendonos
+  },
+  {
+    single: 'Mio Gladiatore',
+    nombre: '',
+    artista: 'Zemmoa',
+    link: 'https://music.apple.com/mx/album/mio-gladiatore/1732364756?i=1732365108&l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'UMG',
+    id: 'record0050',
+    portada: zemmoaMio
+  },
   {
     single: 'Blanco y Negro',
     nombre: '',
@@ -63,7 +174,7 @@ export const DataPortadas = [
     plataforma: 'AppleMusic',
     logos: ['dolby'],
     soundtech: 'Warner Music',
-    id: 'record0048',
+    id: 'record0049',
     portada: yNegro
   },
   {

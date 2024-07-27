@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { themeGoroGoro } from '../Style.theme'
+// import { themeGoroGoro } from '../Style.theme'
 
 export const theme = {
   colors: {

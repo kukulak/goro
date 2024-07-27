@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { themeGoroGoro } from '../Style.theme'
-import textoStudio from '../../icons/texto-studio.svg'
+// import textoStudio from '../../icons/texto-studio.svg'
 
 export const GaleriaWraper = styled.section`
   display: grid;

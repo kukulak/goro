@@ -10,16 +10,10 @@ import ReactPlayer from 'react-player'
 import {
   VideoContainerWraper,
   VideoWraper,
-  LogoWrapper,
-  SpaceCien
+  LogoWrapper
 } from './VideoHome.styles'
 
-import {
-  BrowserView,
-  MobileView,
-  isBrowser,
-  isMobile
-} from 'react-device-detect'
+import { isMobile } from 'react-device-detect'
 
 import goroGoro from '../../icons/logo_goroGoro.svg'
 
@@ -32,7 +26,6 @@ const VideoHome = () => {
   const videoRef = useRef()
   const videoRefs = useRef()
   const muteRef = useRef()
-  const alphaRef = useRef()
 
   const [mensajeCursor, setMensajeCursor] = useState('unmute/mute')
   const [escala, setEscala] = useState('scale(3)')
@@ -221,7 +214,6 @@ const VideoHome = () => {
           data-cursor-text={'unmute mute'}
           data-cursor-size="80px"
           className="videoContainer"
-          // ref={alphaRef}
         >
           <div className="btnMute" ref={muteRef}></div>
 

@@ -454,7 +454,7 @@ const GaleriaInstagram = () => {
           className="colPar"
           ref={colDosRef}
         >
-          {imagInstagram.slice(16, 20).map(img => (
+          {imagInstagram.slice(16, 22).map(img => (
             <InstaCardWraper key={img.id}>
               <BtnToInstagramWraper
                 data-cursor-color="#ba63cc"
@@ -487,7 +487,7 @@ const GaleriaInstagram = () => {
           className="colNone"
           ref={colTresRef}
         >
-          {imagInstagram.slice(21, 25).map(img => (
+          {imagInstagram.slice(22, 28).map(img => (
             <InstaCardWraper key={img.id}>
               <BtnToInstagramWraper
                 data-cursor-color="#ba63cc"
@@ -520,7 +520,7 @@ const GaleriaInstagram = () => {
           className="colPar"
           ref={colCuatroRef}
         >
-          {imagInstagram.slice(26, 30).map(img => (
+          {imagInstagram.slice(28, 34).map(img => (
             <InstaCardWraper>
               <BtnToInstagramWraper
                 data-cursor-color="#ba63cc"
@@ -554,7 +554,7 @@ const GaleriaInstagram = () => {
           className="colNone"
           ref={colCincoRef}
         >
-          {imagInstagram.slice(31, 35).map(img => (
+          {imagInstagram.slice(34, 40).map(img => (
             <InstaCardWraper key={img.id}>
               <BtnToInstagramWraper
                 data-cursor-color="#ba63cc"
@@ -587,7 +587,7 @@ const GaleriaInstagram = () => {
           className="colPar"
           ref={colSeisRef}
         >
-          {imagInstagram.slice(36, 40).map(img => (
+          {imagInstagram.slice(40, 46).map(img => (
             <InstaCardWraper>
               <BtnToInstagramWraper
                 data-cursor-color="#ba63cc"
