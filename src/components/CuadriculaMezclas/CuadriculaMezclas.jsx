@@ -3,13 +3,15 @@ import CuadriculaRecord from './CuadriculaRecord'
 import Modal from 'react-modal'
 import useScrollBlock from '../../hooks/useScrollBlock'
 
-import { DataPortadas } from './DataPortadas'
+import finalData from './DataPortadas'
+import { DataPortadasFijas } from './DataPortadasFijas'
 
 import Title from '../GlobalElements/Title.component'
 
 import '../Mezclas/Mezclas.styles.css'
 
-//
+import AppleMusic from '../../icons/logo_appleMusic.svg'
+import YouTube from '../../icons/icon_youTube.svg'
 
 const customStyles = {
   content: {
@@ -29,113 +31,130 @@ const customStyles = {
 }
 
 const CuadriculaMezclas = () => {
-  let subtitle
+  // Función para hacer shuffle
+  // const handleShuffle = () => {
+  //   setShuffledData(shuffleWithoutConsecutiveArtists(DataPortadas));
+  // };
+
   const [blockScroll, allowScroll] = useScrollBlock()
   const [modalIsOpen, setIsOpen] = useState(false)
-  const [indexRecord, setIndexRecord] = useState(0)
+  const [selectedRecord, setSelectedRecord] = useState(null) // Estado para la portada seleccionada
 
-  function openModal(index) {
+  // Abre el modal con la portada seleccionada
+  function openModal(mezcla) {
     setIsOpen(true)
-    setIndexRecord(index)
+    setSelectedRecord(mezcla) // Aseguramos que solo se guarde la información de una portada
     blockScroll()
   }
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00'
-  }
-
+  // Cierra el modal y limpia el estado seleccionado
   function closeModal() {
     setIsOpen(false)
+    setSelectedRecord(null) // Limpiamos el estado cuando se cierra el modal
     allowScroll()
   }
-  // const mezclas = mezclasApi
-  const mezclas = DataPortadas
 
   return (
     <div className="mezclas pt-24">
       <Title title={'Mezclas'} />
 
       <div className="recordsContainer bg-[#00000047] mt-40 sm:mt-20 p-[2%] gap-[2vw] pb[8%] grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 ">
-        {mezclas.map((mezcla, index) => (
+        {/* Renderizamos las portadas fijas */}
+        {DataPortadasFijas.map(mezcla => (
           <CuadriculaRecord
             className="record"
             key={mezcla.id}
             portada={mezcla.portada}
             nombre={mezcla.nombre}
             artista={mezcla.artista}
-            link={() => openModal(index)}
+            link={() => openModal(mezcla)} // Pasamos la portada completa al modal
           />
         ))}
 
+        {/* Renderizamos las portadas mezcladas una vez */}
+        {finalData.map(mezcla => (
+          <CuadriculaRecord
+            className="record"
+            key={mezcla.id}
+            portada={mezcla.portada}
+            nombre={mezcla.nombre}
+            artista={mezcla.artista}
+            link={() => openModal(mezcla)} // También pasamos la mezcla completa
+          />
+        ))}
+
+        {/* {DataPortadas.map(mezcla => (
+          <CuadriculaRecord
+            className="record"
+            key={mezcla.id}
+            portada={mezcla.portada}
+            nombre={mezcla.nombre}
+            artista={mezcla.artista}
+            link={() => openModal(mezcla)} // También pasamos la mezcla completa
+          />
+        ))} */}
+
+        {/* Modal con la portada seleccionada */}
         <Modal
           isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           style={customStyles}
-          // style={{
-          //   overlay: {
-          //     backgroundColor: 'papayawhip'
-          //   },
-          //   content: {
-          //     color: 'lightsteelblue'
-          //   }
-          // }}
-          contentLabel="Example Modal"
+          contentLabel="Modal Mezcla"
         >
-          {indexRecord >= 0 && (
+          {/* Aseguramos que solo mostramos una portada si está seleccionada */}
+          {selectedRecord && (
             <div className="flex max-w-[80vw] sm:max-w-[70vw] items-center flex-col sm:flex-row ">
-              {/* <h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2> */}
-
               <img
                 className="w-72 h-72"
-                alt={mezclas[indexRecord].nombre}
-                src={mezclas[indexRecord].portada}
+                alt={selectedRecord.nombre}
+                src={selectedRecord.portada}
               />
               <div className="w-[97%] flex gap-5 py-10 sm:pl-10 justify-between flex-col items-center sm:flex-row">
                 <div className="w-[90%]">
                   <h5 className=" text-purple-100 text-2xl">
-                    {' '}
-                    {mezclas[indexRecord].artista}{' '}
+                    {selectedRecord.artista}
                   </h5>
                   <div className=" text-purple-100 text-base">
-                    {' '}
-                    {mezclas[indexRecord].premio}{' '}
+                    {selectedRecord.premio}
                   </div>
                   <div className=" text-purple-100 text-xl">
-                    {' '}
-                    {mezclas[indexRecord].nombre}{' '}
+                    {selectedRecord.nombre}
                   </div>
                   <div className=" text-purple-100 text-3xl">
-                    {' '}
-                    {mezclas[indexRecord].single}{' '}
+                    {selectedRecord.single}
+                  </div>
+                  <div className=" text-purple-100 text-1xl mb-2 mt-4">
+                    {selectedRecord.extra}
                   </div>
                   <div className="logos flex flex-wrap flex-row gap-3 max-w-xs">
-                    {mezclas[indexRecord].logos.map(logo => {
+                    {selectedRecord.logos.map(logo => {
                       return (
                         <div key={logo} className={`logoMezclas ${logo}`} />
                       )
                     })}
                   </div>
                   <div className=" text-purple-100 text-xl">
-                    {' '}
-                    {mezclas[indexRecord].produccion}{' '}
+                    {selectedRecord.produccion}
                   </div>
                   <div className=" text-purple-100 text-base">
-                    {' '}
-                    {mezclas[indexRecord].soundtech}{' '}
+                    {selectedRecord.soundtech}
                   </div>
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href={mezclas[indexRecord].link}
+                    href={selectedRecord.link}
                   >
-                    <div className={mezclas[indexRecord].plataforma}></div>
-                    {/* <div className="logos flex flex-wrap flex-row gap-7 max-w-xs">
-                      {mezclas[indexRecord].logos.map(logo => {
-                        return <div className={`logoMezclas ${logo}`} />
-                      })}
-                    </div> */}
+                    {/* <div className={selectedRecord.plataforma}></div> */}
+
+                    {selectedRecord.plataforma === 'AppleMusic' ? (
+                      <img
+                        className=" mt-12 h-10"
+                        src={AppleMusic}
+                        alt="Link Apple Music"
+                      />
+                    ) : (
+                      <img src={YouTube} alt="Link YouTube" />
+                    )}
                   </a>
                 </div>
                 <button
@@ -145,14 +164,6 @@ const CuadriculaMezclas = () => {
                   X
                 </button>
               </div>
-
-              {/* <form>
-                <input />
-                <button>tab navigation</button>
-                <button>stays</button>
-                <button>inside</button>
-                <button>the modal</button>
-              </form> */}
             </div>
           )}
         </Modal>

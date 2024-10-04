@@ -31,12 +31,14 @@ const Record = props => {
     transform: 'scale(1)'
   }
   const portadaUnBlur = {
-    // transition: 'all 0.5s ease-out',
-    transitionDuration: '0.5s',
+    transitionDuration: '0.4s',
     transitionTimingFunction: 'cubic-bezier(0, 1.42, 0.57, 1)',
     transitionProperty: 'all',
-    transform: 'scale(1.1)'
+    transform: 'scale(1.13)'
   }
+
+  const handleMouseEnter = () => setBlurunblur(portadaUnBlur)
+  const handleMouseLeave = () => setBlurunblur(portadaBlur)
 
   return (
     <div
@@ -46,6 +48,7 @@ const Record = props => {
       data-cursor-color="#ba63cc"
       data-cursor-text={'Abrir'}
       data-cursor-size="80px"
+
       // data-cursor-magnetic
       // onClick={() => manageClick(props.link)}
     >
@@ -53,11 +56,11 @@ const Record = props => {
         alt={props.nombre}
         style={blurunblur}
         // hover:scale-125
-        className={`${blurunblur} shadow-xl  hover:shadow-1xl transition-all imgRecord blur-none sm:blur-[0px] duration-[200ms] hover:blur-none`}
+        className={`shadow-xl  hover:shadow-1xl transition-all imgRecord blur-none sm:blur-[0px] duration-[200ms] hover:blur-none`}
         src={props.portada}
-        ref={recordRef}
-        onMouseEnter={() => setBlurunblur(portadaUnBlur)}
-        onMouseLeave={() => setBlurunblur(portadaBlur)}
+        // ref={recordRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       />
     </div>
   )

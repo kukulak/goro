@@ -23,16 +23,15 @@ import amazon from '../../icons/logo_amazon.svg' */
 }
 
 .AppleMusic {
-  background-image: url(../../icons/logo_appleMusic.svg);
+  background-image: url(../../icons/logo_appleMusic.svg?v=2);
   background-repeat: no-repeat;
-  /* background-position-y: 50%; */
   width: 160px;
   height: 37px;
   margin: 10px 0 8px 0;
 }
 
 .YouTube {
-  background-image: url(../../icons/icon_youTube.svg);
+  background-image: url(../../icons/icon_youTube.svg?v=2);
   background-repeat: no-repeat;
   /* background-position-y: 50%; */
   /* background-position-x: left; */

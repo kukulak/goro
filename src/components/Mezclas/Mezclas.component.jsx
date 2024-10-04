@@ -228,6 +228,7 @@ const Mezclas = () => {
             link={mezcla.link}
             plataforma={mezcla.plataforma}
             logos={mezcla.logos}
+            extra={mezcla.extra}
           />
         ))}
       </RecordWraper>

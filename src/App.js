@@ -40,8 +40,11 @@ function App() {
       <Home />
       <VideoHome />
       <Quienes
-        text={`Goro Goro Immersive Lab es un estudio boutique que está idealmente ubicado en el corazón de la Ciudad de México. Somos un laboratorio formado por ingenieros y artistas creativos dedicados a experiencias audiovisuales inmersivas que utilizan tecnología de punta.`}
+        text={`Goro Goro Immersive Lab es un estudio boutique estratégicamente ubicado en el corazón de la Ciudad de México. Este innovador laboratorio está conformado por un equipo de ingenieros y artistas creativos apasionados por las experiencias audiovisuales inmersivas. Utilizando tecnología de vanguardia, Goro Goro se especializa en la creación de contenido de alta calidad, ofreciendo servicios de producción, mezcla y masterización con un enfoque particular en la experiencia Dolby Atmos. `}
       />
+      {/* <Quienes
+        text={`Goro Goro Immersive Lab es un estudio boutique que está idealmente ubicado en el corazón de la Ciudad de México. Somos un laboratorio formado por ingenieros y artistas creativos dedicados a experiencias audiovisuales inmersivas que utilizan tecnología de punta.`}
+      /> */}
 
       <CuadriculaMezclas />
 

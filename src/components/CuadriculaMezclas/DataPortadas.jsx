@@ -1,4 +1,3 @@
-// import olgaPal from '../../discos/olga1000x1000bb-60.jpeg'
 import olgaNominada from '../../discos/olga-nominada.png'
 import mujerEsperanza from '../../discos/mujerEsperanza1000x1000bb.webp'
 import mxf from '../../discos/mxfBig.jpeg'
@@ -6,8 +5,7 @@ import muva from '../../discos/muva.jpg'
 import chimalaFeliz from '../../discos/chimbalaFeliz.png'
 import zemmoaSigueme from '../../discos/zemmoaSigueme.png'
 import tydDerretida from '../../discos/thayanafriaDerretida.png'
-// import valentinaIThink from '../../discos/valentinaMoretti-iThinkOfYou.png'
-// import valentinaPienso from '../../discos/valentinaMoretti-tePienso.png'
+
 import mariachiQueSea from '../../discos/mariachi-queSea.png'
 import zemmoaCorazon from '../../discos/zemmoa-corazon.png'
 import remikGonzalezUnBaiza from '../../discos/RemikGonzalez-UnBaiza.png'
@@ -21,7 +19,7 @@ import espacio from '../../discos/IMG_0215.jpg'
 import despiertas from '../../discos/IMG_9512.jpg'
 import majin from '../../discos/IMG_9513.jpg'
 import sacaeltoque from '../../discos/IMG_9514.jpg'
-import ocho from '../../discos/IMG_9515.jpg'
+
 import hojadete from '../../discos/IMG_9516.jpg'
 import holidays from '../../discos/IMG_9517.jpg'
 import notenia from '../../discos/IMG_9518.jpg'
@@ -46,17 +44,14 @@ import corazonDeAve from '../../discos/septiembre/VIVIRQUINTANA-CorazonDeAve.jpe
 import caribe from '../../discos/noviembre/leonneon-caribe.jpg'
 import pasaras from '../../discos/noviembre/vivirQuintana-pasaras.jpg'
 import mexicoEnMiVoz from '../../discos/noviembre/christianNodal-mexicoEnMiVoz.jpg'
-import teMerecesUnAmor2 from '../../discos/noviembre/vivirQuintana-teMerecesUnAmor.jpg'
+
 import tuCamisa from '../../discos/noviembre/escarlataShantty-tuCamisa.jpg'
 import sabor from '../../discos/noviembre/maoSky-sabor.jpg'
 import alPueblo from '../../discos/febrero2024/alPueblo.jpeg'
-import fruslerias from '../../discos/febrero2024/fruslerias.jpeg'
 import masAlto from '../../discos/febrero2024/masAlto.jpeg'
-import yNegro from '../../discos/febrero2024/yNegro.jpeg'
 
-import chNodal from '../../discos/julio2024/CHRISTIAN_NODAL_KBRON_MEDIO.png'
 import luaLacruz from '../../discos/julio2024/LUA_LACRUZ_EN_CUALQUIER_MOMENTO.png'
-import remikDemonios from '../../discos/julio2024/REMIK_ALBUM_MIS_DEMONIOS.png'
+
 import romiGenero from '../../discos/julio2024/ROMI_AXHE_SAFREE_GENERO_REMIX.png'
 import snowApple from '../../discos/julio2024/SNOW_APPLE_LA_CUMBIA_DE_LAS_LOCAS.png'
 import sofiMata from '../../discos/julio2024/SOFI_MATA_SI_ME_DICES_QUE_SI.png'
@@ -64,7 +59,89 @@ import zemmoaMio from '../../discos/julio2024/ZEMMOA_MIO_GLADIATORE.png'
 import zemmoaQueriendonos from '../../discos/julio2024/ZEMMOA_QUERIENDONOS_BIEN.png'
 import zemmoaCancion from '../../discos/julio2024/ZEMMOA-MI_FAVORITA_CANCION.png'
 
-export const DataPortadas = [
+import ovejaNegra from '../../discos/sep2024/ovejaNegra.png'
+import foudequshMamixhula from '../../discos/sep2024/foudequshMamixhula.png'
+
+import gretschVolver from '../../discos/sep2024/gretschVolver.png'
+
+import cumbiaClandestina from '../../discos/sep2024/cumbiaClandestina.png'
+
+import corridosPaMisCompas from '../../discos/sep2024/corridosPaMisCompas.png'
+
+import s925 from '../../discos/sep2024/s925.png'
+
+const data = [
+  {
+    single: 'Oveja Negra',
+    nombre: '',
+    artista: 'GhettoLiving',
+    link: 'https://music.apple.com/mx/album/oveja-negra/1704247766',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'Universal Music Group México (UMM)',
+    id: 'record0064',
+    portada: ovejaNegra
+  },
+  {
+    single: 'Mercedes Blanco, Mamixhula',
+    nombre: 'Apple Music Home Session',
+    artista: 'GhettoLiving',
+    link: 'https://music.apple.com/mx/album/apple-music-home-session-foudeqush-single/1666051342',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'Finess Records',
+    id: 'record0063',
+    portada: foudequshMamixhula
+  },
+
+  {
+    single: 'Volver',
+    nombre: '',
+    artista: 'Gretsch',
+    link: 'https://music.apple.com/mx/album/volver-single/1757531516',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'Universal Music Group México (UMM)',
+    id: 'record0062',
+    portada: gretschVolver
+  },
+
+  {
+    single: 'Cumbia Clandestina - EP',
+    nombre: '',
+    artista: 'Mao Skaay & Thcumbia',
+    link: 'https://music.apple.com/mx/album/cumbia-clandestina-ep/1729907606',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'Masare Records',
+    id: 'record0061',
+    portada: cumbiaClandestina
+  },
+
+  {
+    single: 'Corridos pa mis compas y rolitas pa mi ex',
+    nombre: '',
+    artista: 'La Receta',
+    link: 'https://music.apple.com/mx/album/corridos-pa-mis-compas-y-rolitas-pa-mi-ex/1761664153',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'DALE PLAY Records / Solido Records',
+    id: 'record0060',
+    portada: corridosPaMisCompas
+  },
+
+  {
+    single: 'S925',
+    nombre: '',
+    artista: 'Plata Shail',
+    link: 'https://music.apple.com/mx/album/s925/1712579604 ',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'Universal Music Group México (UMM)',
+    id: 'record0059',
+    portada: s925
+  },
+
   {
     single: 'Género (Remix)',
     nombre: '',
@@ -101,17 +178,6 @@ export const DataPortadas = [
   },
 
   {
-    single: 'Kbron y Medio',
-    nombre: '',
-    artista: 'Lua Lacruz',
-    link: 'https://music.apple.com/mx/album/kbron-y-medio/1746543040?i=1746543043&l=en-GB',
-    plataforma: 'AppleMusic',
-    logos: ['dolby'],
-    soundtech: 'Sony Music Entertainment México',
-    id: 'record0055',
-    portada: chNodal
-  },
-  {
     single: 'En cualquier momento',
     nombre: '',
     artista: 'Lua Lacruz',
@@ -122,17 +188,7 @@ export const DataPortadas = [
     id: 'record0054',
     portada: luaLacruz
   },
-  {
-    single: 'Mis demonios',
-    nombre: '',
-    artista: 'Remik Gonzalez',
-    link: 'https://music.apple.com/mx/album/mis-demonios/1749121488?l=en-GB',
-    plataforma: 'AppleMusic',
-    logos: ['dolby'],
-    soundtech: 'OpenRpm',
-    id: 'record0053',
-    portada: remikDemonios
-  },
+
   {
     single: 'Mi favorita canción',
     nombre: '',
@@ -166,39 +222,19 @@ export const DataPortadas = [
     id: 'record0050',
     portada: zemmoaMio
   },
-  {
-    single: 'Blanco y Negro',
-    nombre: '',
-    artista: 'Lagos Ft Elena Rose',
-    link: 'https://music.apple.com/mx/album/blanco-y-negro/1726404385?i=1726404390',
-    plataforma: 'AppleMusic',
-    logos: ['dolby'],
-    soundtech: 'Warner Music',
-    id: 'record0049',
-    portada: yNegro
-  },
+
   {
     single: 'Vuela más alto',
     nombre: '',
     artista: 'Zemmoa',
-    link: 'https://music.apple.com/mx/album/frusleri-as/1726541516',
+    link: ' https://music.apple.com/sv/album/vuela-m%C3%A1s-alto/1728764783?i=1728764784&l=en-GB ',
     plataforma: 'AppleMusic',
     logos: ['dolby'],
     soundtech: 'UMG',
     id: 'record0048',
     portada: masAlto
   },
-  {
-    single: 'Distribución del álbum Fruslerías',
-    nombre: '',
-    artista: '',
-    link: 'https://music.apple.com/mx/album/frusleri-as/1726541516',
-    plataforma: 'AppleMusic',
-    logos: ['dolby'],
-    soundtech: 'Disquera GoroGoro IL',
-    id: 'record0047',
-    portada: fruslerias
-  },
+
   {
     single: '¿Quién cuida al pueblo?',
     nombre: '',
@@ -232,22 +268,23 @@ export const DataPortadas = [
     id: 'record0044',
     portada: tuCamisa
   },
+
   {
-    single: '',
-    nombre: 'Te Mereces Un Amor',
-    artista: 'Vivir Quintana',
-    link: 'https://music.apple.com/mx/album/te-mereces-un-amor/1710064430',
-    plataforma: 'AppleMusic',
-    logos: ['dolby'],
-    soundtech: 'EMI; Universal Music Group México, S.A. de C.V.',
-    id: 'record0043',
-    portada: teMerecesUnAmor2
-  },
-  {
-    single: 'México en mi voz',
+    single: 'Mujeres Divinas',
     nombre: '',
     artista: 'Christian Nodal',
-    link: 'https://music.apple.com/mx/album/m%C3%A9xico-en-mi-voz-ep/1706383410',
+    link: 'https://music.apple.com/sv/album/mujeres-divinas/1706383410?i=1706383424&l=en-GB',
+    plataforma: 'AppleMusic',
+    logos: ['dolby'],
+    soundtech: 'Sony Music Entertainment',
+    id: 'record0043',
+    portada: mexicoEnMiVoz
+  },
+  {
+    single: 'La Ley del Monte',
+    nombre: '',
+    artista: 'Christian Nodal',
+    link: 'https://music.apple.com/sv/album/la-ley-del-monte/1706383410?i=1706383552&l=en-GB',
     plataforma: 'AppleMusic',
     logos: ['dolby'],
     soundtech: 'Sony Music Entertainment',
@@ -324,9 +361,10 @@ export const DataPortadas = [
     single: 'Hilo Rojo',
     nombre: '',
     artista: 'GRTSCH',
-    link: 'https://music.apple.com/mx/album/fth/1696276573?i=1696276794',
+    link: 'https://music.apple.com/sv/album/hilo-rojo/1700671146?i=1700671307&l=en-GB',
     plataforma: 'AppleMusic',
     logos: ['dolby'],
+    extra: 'Mix Estéreo',
     soundtech: '2023 GRTSCH',
     id: 'record0035',
     portada: hiloRojo
@@ -482,6 +520,7 @@ export const DataPortadas = [
     link: 'https://music.apple.com/mx/album/hojadeté/1656779699?i=1656779702',
     plataforma: 'AppleMusic',
     logos: ['dolby'],
+    extra: 'Mix Estéreo',
     soundtech: '',
     id: 'record0019',
     portada: hojadete
@@ -497,17 +536,7 @@ export const DataPortadas = [
     id: 'record0024',
     portada: psycho
   },
-  {
-    single: '',
-    nombre: 'Ocho ',
-    artista: 'DLD',
-    link: 'https://music.apple.com/mx/album/ocho/1669331561',
-    plataforma: 'AppleMusic',
-    logos: ['dolby'],
-    soundtech: 'Sony Music Entertaiment México, S.A. de C.V. ',
-    id: 'record0018',
-    portada: ocho
-  },
+
   {
     single: 'Saca el toke',
     // nombre: 'Masare Records ',
@@ -536,7 +565,7 @@ export const DataPortadas = [
     nombre: "Pal' Combo Es Lo Que Hay",
     artista: 'Olga Tañón',
     premio: 'Latin Grammy Nominee(2022), Best Merengue/Bachata Album',
-    link: 'https://music.apple.com/mx/album/el-jala-jala/1593462122?i=1593462123',
+    link: 'https://music.apple.com/sv/album/el-jala-jala/1736961709?i=1736961716&l=en-GB',
     plataforma: 'AppleMusic',
     logos: ['dolby'],
     soundtech: 'ONErpm',
@@ -640,7 +669,7 @@ export const DataPortadas = [
     single: '',
     nombre: 'Mujer Esperanza',
     artista: 'Luz María Carriquiry',
-    link: 'https://music.apple.com/us/album/_/1592051666?app=music&at=1000lHKX&ct=linktree_http&i=1592051669&itscg=30200&itsct=lt_m&ls=1&mt=1',
+    link: 'https://music.apple.com/mx/album/mujer-esperanza-feat-elizabeth-morris-liuba-mar%C3%ADa-hevia/1725340262?i=1725340263&l=en-GB',
     plataforma: 'AppleMusic',
     logos: ['lossless', 'tidal', 'spotify', 'amazon'],
     soundtech: true,
@@ -715,3 +744,33 @@ export const DataPortadas = [
     portada: mariachiQueSea
   }
 ]
+
+// const shuffledData = array => {
+//   for (let i = array.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1))
+//     ;[array[i], array[j]] = [array[j], array[i]]
+//   }
+//   return array
+// }
+
+function shuffleWithoutConsecutiveArtists(arr) {
+  let shuffled = [...arr]
+  shuffled.sort(() => Math.random() - 0.5)
+
+  for (let i = 1; i < shuffled.length; i++) {
+    if (shuffled[i].artista === shuffled[i - 1].artista) {
+      if (i + 1 < shuffled.length) {
+        ;[shuffled[i], shuffled[i + 1]] = [shuffled[i + 1], shuffled[i]]
+      } else {
+        shuffled = shuffleWithoutConsecutiveArtists(arr)
+        break
+      }
+    }
+  }
+
+  return shuffled
+}
+
+const finalData = shuffleWithoutConsecutiveArtists(data)
+
+export default finalData

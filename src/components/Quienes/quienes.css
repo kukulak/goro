@@ -1,0 +1,11 @@
+/* .paraghraph > span:last-child {
+  font-weight: bold;
+} */
+
+.paraghraph > span:nth-last-child(2) {
+  font-weight: bold;
+}
+
+.paraghraph > span:nth-last-child(3) {
+  font-weight: bold;
+}

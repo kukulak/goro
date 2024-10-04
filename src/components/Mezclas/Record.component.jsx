@@ -233,6 +233,7 @@ const CuadriculaRecord = props => {
         <RecordNameWraper>{props.nombre}</RecordNameWraper>
         <ParaghraphWraper>{props.artista}</ParaghraphWraper>
         <OneRpmWraper>{props.soundtech}</OneRpmWraper>
+        <RecordNameWraper>{props.extra}</RecordNameWraper>
         <ProduccionWraper>{props.produccion}</ProduccionWraper>
         {/* <ListenWraper className='listenWraper'> */}
         {/* <p>Click to Listen</p> */}

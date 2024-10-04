@@ -8,6 +8,8 @@ import {
 
 import { isBrowser, isMobile } from 'react-device-detect'
 
+import './quienes.css'
+
 // GSAP
 
 import { SplitText } from '../../utils/SplitText'
@@ -44,21 +46,6 @@ const Quienes = props => {
     })
   })
 
-  // TABLET
-  // useEffect(() => {
-  //   ScrollTrigger.matchMedia({
-  //     '(min-width: 700px)': function () {
-  //       gsap.to(serviciosRef.current, {
-  //         xPercent: -58,
-  //         ease: 'none',
-  //         // duration: 50,
-  //         duration: 5,
-  //         repeat: -1
-  //       })
-  //     }
-  //   })
-  // })
-
   useEffect(() => {
     gsap.to(quienesRef.current, {
       y: -200,
@@ -71,18 +58,6 @@ const Quienes = props => {
         scrub: 2
       }
     })
-
-    // gsap.to(titleRef.current, {
-    //     y: 50,
-    //     scrollTrigger:{
-    //         trigger: titleRef.current,
-    //         start: 'top bottom',
-    //         end: 'bottom top',
-    //         markers: false,
-    //         id: 'quienes',
-    //         scrub: 1,
-    //     }
-    // })
   }, [])
 
   return (

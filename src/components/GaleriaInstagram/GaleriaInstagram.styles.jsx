@@ -104,6 +104,27 @@ export const InstaCardWraper = styled.div`
   }
 `
 
+export const InstaBtnWraper = styled.a`
+  display: grid;
+  grid-template-columns: 0.1fr 1.9fr;
+  img {
+    max-width: 500px;
+  }
+  @media (max-width: 450px) {
+    ${'' /* grid-template-rows: 0.1fr 1.9fr; */}
+    grid-template-rows: 1fr;
+    grid-column-start: 1;
+    grid-template-columns: 0;
+  }
+  @media (max-width: 820px) {
+    display: initial;
+    img {
+      width: 320px;
+      height: 330px;
+    }
+  }
+`
+
 export const FrameWraper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));

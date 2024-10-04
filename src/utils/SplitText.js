@@ -46,6 +46,7 @@ export function SplitText({ children }) {
 
   let words = children.split(' ')
   // console.log(words);
+
   return words.map((word, i) => {
     return (
       <span

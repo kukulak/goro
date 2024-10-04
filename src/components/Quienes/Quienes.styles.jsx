@@ -31,7 +31,7 @@ export const TitleWraper = styled.h1`
 export const ParaghraphWraper = styled.p`
   color: ${() => themeGoroGoro.colors.primary};
   font-family: ${() => themeGoroGoro.fonts.primary};
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 200;
   line-height: 1.3;
   text-align: left;
@@ -47,7 +47,7 @@ export const ParaghraphWraper = styled.p`
     margin-left: -155px;
   }
   @media (max-width: 820px) {
-    font-size: 38px;
+    font-size: 21px;
     margin-left: 0px;
     width: 80vw;
     ${'' /* margin-top: 400px; */}
